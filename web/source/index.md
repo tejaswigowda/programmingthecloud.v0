@@ -2,13 +2,13 @@
 title: API Reference
 
 language_tabs:
-  - shell: cURL
-  - ruby: Ruby
-  - python: Python
+  - shell: Terminal
+  - css: CSS 
+  - html: HTML
+  - js-node: JS-Node
+  - js-browser: JS-Browser
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
   - _errors
