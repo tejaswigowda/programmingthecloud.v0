@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Programming the Cloud </title>
 
     <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
@@ -18,8 +18,8 @@
             langs.push("shell");
             langs.push("css");
             langs.push("html");
-            langs.push("js-node");
-            langs.push("js-browser");
+            langs.push("ruby");
+            langs.push("python");
           setupLanguages( langs );
         });
       </script>
@@ -38,8 +38,8 @@
               <a href="#" data-language-name="shell"> Terminal</a>
               <a href="#" data-language-name="css"> CSS </a>
               <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="js-node"> JS-Node</a>
-              <a href="#" data-language-name="js-browser"> JS-Browser</a>
+              <a href="#" data-language-name="ruby"> Javascript</a>
+              <a href="#" data-language-name="python"> JSON</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -57,15 +57,73 @@
 <p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
 <p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 <p>This example API documentation page was created with <a href="http://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h2 id="authentication">Authentication</h2>
+<h1 id="the-modern-web">The Modern Web</h1>
+<h2 id="history-of-the-web-10-">History of the Web (10)</h2>
+<h2 id="the-client-server-model-10-">The client-server model (10)</h2>
+<h2 id="the-browser-10-">The Browser (10)</h2>
+<h2 id="web-server-20-">Web Server (20)</h2>
+<h1 id="html-and-css-designing-for-the-web">HTML and CSS — Designing for the web</h1>
+<h2 id="html5">HTML5</h2>
+<p>The Hypertext Transfer Protocol outlines the framework for web-servers, browsers, apps and  to transfer web-pages and </p>
+<h2 id="concurrent-style-sheets">Concurrent Style Sheets</h2>
+<h3 id="embed-in-html">Embed in HTML</h3>
+<h3 id="jsfiddle">jsFiddle</h3>
+<h3 id="css-animations">CSS Animations</h3>
+<h3 id="jquery">jQuery</h3>
+<h3 id="responsive-design">Responsive Design</h3>
+<h4 id="css-media-queries">CSS Media queries</h4>
+<h4 id="jquery">jQuery</h4>
+<h1 id="javascript-coding-for-the-web">Javascript — Coding for the web</h1>
+<h2 id="programming-basics">Programming basics</h2>
+<h3 id="doing-arithmetic">Doing Arithmetic</h3>
+<h3 id="operators">Operators</h3>
+<h3 id="execution-sequence">Execution sequence</h3>
+<h3 id="simple-statements">Simple Statements</h3>
+<h3 id="variables-literals-constants">Variables, literals, constants</h3>
+<h3 id="complex-statements">Complex Statements</h3>
+<h3 id="functions-and-closures">Functions and Closures</h3>
+<h3 id="objects">Objects</h3>
+<h3 id="user-input">User input</h3>
+<h3 id="putting-it-all-together">Putting it all together</h3>
+<h3 id="callbacks">Callbacks</h3>
+<h3 id="event-model">Event model</h3>
+<h2 id="integrating-third-party-libraries-git-">Integrating third-party libraries (GIT)</h2>
+<h2 id="customization-via-device-detection">Customization via device detection</h2>
+<h1 id="server-side-javascript-node-js-">Server-side JavaScript (Node.js)</h1>
+<h2 id="basic-http-server">Basic HTTP server</h2>
+<h2 id="npm">NPM</h2>
+<h2 id="express-js">Express.js</h2>
+<h2 id="data-persistence-mongodb-">Data persistence (mongoDB)</h2>
+<h2 id="using-amazon-web-services">Using Amazon Web Services</h2>
+<h3 id="ec2">EC2</h3>
+<h3 id="s3">S3</h3>
+<h3 id="sns">SNS</h3>
+<h3 id="ses">SES</h3>
+<h1 id="data-structures-algorithms">Data Structures &amp; Algorithms</h1>
+<h2 id="lists">Lists</h2>
+<h2 id="queue">Queue</h2>
+<h2 id="stacks">Stacks</h2>
+<h2 id="trees">Trees</h2>
+<h2 id="graphs">Graphs</h2>
+<h2 id="sorting">Sorting</h2>
+<h3 id="bubble-sort">bubble sort</h3>
+<h3 id="insertion-sort">insertion sort</h3>
+<h3 id="selection-sort">selection sort</h3>
+<h2 id="sorting-and-filtering-lists">Sorting and Filtering Lists</h2>
+<h1 id="advanced-topics">Advanced Topics</h1>
+<h2 id="less">Less</h2>
+<h2 id="bootstrap">Bootstrap</h2>
+<h2 id="anappfor-me">Anappfor.me</h2>
+<h2 id="native-esque-apps-using-web-technologies-apache-cordova-">Native-esque apps using web technologies (Apache Cordova)</h2>
+<h2 id="building-js-libraries">Building JS Libraries</h2>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre><code class="highlight ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
+<pre><code class="highlight shell">require <span class="hljs-string">'kittn'</span>
 
-api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
+api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
 </code></pre>
-<pre><code class="highlight python"><span class="hljs-keyword">import</span> kittn
+<pre><code class="highlight js"><span class="hljs-keyword">import</span> kittn
 
 api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
 </code></pre>
@@ -85,14 +143,14 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <h1 id="kittens">Kittens</h1>
 <h2 id="get-all-kittens">Get All Kittens</h2>
-<pre><code class="highlight ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
+<pre><code class="highlight css">require &#39;kittn&#39;
 
-api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
+api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
 api.kittens.get
 </code></pre>
-<pre><code class="highlight python"><span class="hljs-keyword">import</span> kittn
+<pre><code class="highlight html">import kittn
 
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
+api = kittn.authorize(&#39;meowmeowmeow&#39;)
 api.kittens.get()
 </code></pre>
 <pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens"</span>
@@ -101,21 +159,21 @@ api.kittens.get()
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json">[
+<pre><code class="highlight js">[
   {
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Fluffums"</span></span>,
-    "<span class="hljs-attribute">breed</span>": <span class="hljs-value"><span class="hljs-string">"calico"</span></span>,
-    "<span class="hljs-attribute">fluffiness</span>": <span class="hljs-value"><span class="hljs-number">6</span></span>,
-    "<span class="hljs-attribute">cuteness</span>": <span class="hljs-value"><span class="hljs-number">7</span>
-  </span>},
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Fluffums"</span>,
+    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"calico"</span>,
+    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">7</span>
+  },
   {
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Isis"</span></span>,
-    "<span class="hljs-attribute">breed</span>": <span class="hljs-value"><span class="hljs-string">"unknown"</span></span>,
-    "<span class="hljs-attribute">fluffiness</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-    "<span class="hljs-attribute">cuteness</span>": <span class="hljs-value"><span class="hljs-number">10</span>
-  </span>}
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Isis"</span>,
+    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"unknown"</span>,
+    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">10</span>
+  }
 ]
 </code></pre>
 <p>This endpoint retrieves all kittens.</p>
@@ -148,15 +206,15 @@ Remember — a happy kitten is an authenticated kitten!
 </aside>
 
 <h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre><code class="highlight ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
+<pre><code class="highlight css">require &#39;kittn&#39;
 
-api = <span class="hljs-constant">Kittn::APIClient</span>.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get(<span class="hljs-number">2</span>)
+api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+api.kittens.get(2)
 </code></pre>
-<pre><code class="highlight python"><span class="hljs-keyword">import</span> kittn
+<pre><code class="highlight html">import kittn
 
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get(<span class="hljs-number">2</span>)
+api = kittn.authorize(&#39;meowmeowmeow&#39;)
+api.kittens.get(2)
 </code></pre>
 <pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
   -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
@@ -257,8 +315,8 @@ api.kittens.get(<span class="hljs-number">2</span>)
               <a href="#" data-language-name="shell"> Terminal</a>
               <a href="#" data-language-name="css"> CSS </a>
               <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="js-node"> JS-Node</a>
-              <a href="#" data-language-name="js-browser"> JS-Browser</a>
+              <a href="#" data-language-name="ruby"> Javascript</a>
+              <a href="#" data-language-name="python"> JSON</a>
           </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 ---
-title: API Reference
+title: Programming the Cloud : WEB
 
 language_tabs:
   - shell: Terminal
   - css: CSS 
   - html: HTML
-  - js-node: JS-Node
-  - js-browser: JS-Browser
+  - ruby: Javascript
+  - python: JSON
 
 toc_footers:
 
@@ -19,25 +19,152 @@ search: true
 
 
 
-# Introduction
+# Introduction 
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+This guide will introduce you to front-end and back-end web
+technologies. Figure 1 show the different technologies we will be using.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+# Motivation
 
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+# The Modern Web
 
-## Authentication
+## History of the Web (10)
+
+## The client-server model (10)
+
+## The Browser (10)
+
+## Web Server (20)
+
+
+# HTML and CSS — Designing for the web
+
+## HTML5
+
+The Hypertext Transfer Protocol outlines the framework for web-servers, browsers, apps and  to transfer web-pages and 
+
+
+## Concurrent Style Sheets
+
+### Embed in HTML
+
+### jsFiddle
+
+### CSS Animations
+
+### jQuery
+
+### Responsive Design
+
+#### CSS Media queries
+
+#### jQuery
+
+
+# Javascript — Coding for the web
+
+## Programming basics
+
+### Doing Arithmetic
+
+### Operators
+
+### Execution sequence
+
+### Simple Statements
+
+### Variables, literals, constants
+
+### Complex Statements
+
+### Functions and Closures
+
+### Objects
+
+### User input
+
+### Putting it all together 
+
+### Callbacks
+
+### Event model
+              
+
+
+
+##   Integrating third-party libraries (GIT)
+
+##   Customization via device detection
+
+
+
+# Server-side JavaScript (Node.js)
+
+## Basic HTTP server
+
+## NPM
+
+## Express.js
+
+## Data persistence (mongoDB)
+
+## Using Amazon Web Services
+
+### EC2
+
+### S3
+
+### SNS
+
+### SES
+
+# Data Structures & Algorithms
+
+## Lists
+
+## Queue
+
+## Stacks
+
+## Trees
+
+## Graphs
+
+## Sorting
+
+### bubble sort
+
+### insertion sort
+
+### selection sort
+
+## Sorting and Filtering Lists
+
+
+
+
+# Advanced Topics
+
+## Less 
+
+## Bootstrap
+
+## Anappfor.me
+
+## Native-esque apps using web technologies (Apache Cordova)
+
+## Building JS Libraries
+
 
 > To authorize, use this code:
 
-```ruby
+```shell
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 ```
 
-```python
+```js
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
@@ -65,14 +192,14 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## Get All Kittens
 
-```ruby
+```css
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get
 ```
 
-```python
+```html
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
@@ -86,7 +213,7 @@ curl "http://example.com/api/kittens"
 
 > The above command returns JSON structured like this:
 
-```json
+```js
 [
   {
     "id": 1,
@@ -124,14 +251,14 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Kitten
 
-```ruby
+```css
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
 ```
 
-```python
+```html
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
