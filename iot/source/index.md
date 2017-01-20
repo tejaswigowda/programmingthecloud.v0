@@ -11,7 +11,7 @@ language_tabs:
 toc_footers:
 
 includes:
-  - _errors
+  - _kit
 
 search: true
 ---
