@@ -44,7 +44,13 @@ technologies. Figure 1 show the different technologies we will be using.
 
 ## esptool.py
 
+## AWS EC2
 
+## AWS IoT
+
+## Node.js
+
+## mongoDB
 
 > To authorize, use this code:
 
