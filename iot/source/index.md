@@ -1,5 +1,5 @@
 ---
-title: Programming the Cloud : WEB
+title: Programming the Cloud : IoT
 
 language_tabs:
   - shell: Terminal
@@ -12,6 +12,7 @@ toc_footers:
 
 includes:
   - _kit
+  - _class
 
 search: true
 ---
@@ -37,126 +38,20 @@ technologies. Figure 1 show the different technologies we will be using.
 ## Web Server (20)
 
 
-# HTML and CSS — Designing for the web
+# Tools
 
-## HTML5
+## Arduino IDE
 
-The Hypertext Transfer Protocol outlines the framework for web-servers, browsers, apps and  to transfer web-pages and 
+## esptool.py
 
-
-## Concurrent Style Sheets
-
-### Embed in HTML
-
-### jsFiddle
-
-### CSS Animations
-
-### jQuery
-
-### Responsive Design
-
-#### CSS Media queries
-
-#### jQuery
-
-
-# Javascript — Coding for the web
-
-## Programming basics
-
-### Doing Arithmetic
-
-### Operators
-
-### Execution sequence
-
-### Simple Statements
-
-### Variables, literals, constants
-
-### Complex Statements
-
-### Functions and Closures
-
-### Objects
-
-### User input
-
-### Putting it all together 
-
-### Callbacks
-
-### Event model
-              
-
-
-
-##   Integrating third-party libraries (GIT)
-
-##   Customization via device detection
-
-
-
-# Server-side JavaScript (Node.js)
-
-## Basic HTTP server
-
-## NPM
-
-## Express.js
-
-## Data persistence (mongoDB)
-
-## Using Amazon Web Services
-
-### EC2
-
-### S3
-
-### SNS
-
-### SES
-
-# Data Structures & Algorithms
-
-## Lists
-
-## Queue
-
-## Stacks
-
-## Trees
-
-## Graphs
-
-## Sorting
-
-### bubble sort
-
-### insertion sort
-
-### selection sort
-
-## Sorting and Filtering Lists
-
-
-
-
-# Advanced Topics
-
-## Less 
-
-## Bootstrap
-
-## Anappfor.me
-
-## Native-esque apps using web technologies (Apache Cordova)
-
-## Building JS Libraries
 
 
 > To authorize, use this code:
+
+# IoT Experiment
+
+## Hello World
+
 
 ```shell
 require 'kittn'
