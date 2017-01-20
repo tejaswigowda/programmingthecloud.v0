@@ -10,7 +10,7 @@ The Kittn API uses the following error codes:
 
 Part | Description
 ---------- | -------
-400 | Bad Request -- Your request sucks
+![DHT11](images/parts/DHT11.png) | DHT sensor
 401 | Unauthorized -- Your API key is wrong
 403 | Forbidden -- The kitten requested is hidden for administrators only
 404 | Not Found -- The specified kitten could not be found
