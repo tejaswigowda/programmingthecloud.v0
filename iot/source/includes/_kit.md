@@ -17,7 +17,6 @@ Analog Temp 	   | ![AnalogTemp](images/parts/AnalogTemp.png) 	   | Analog Temper
 Avoid 			   | ![Avoid](images/parts/Avoid.png) 				   | Avoid?
 Ball Switch 	   | ![BallSwitch](images/parts/BallSwitch.png)		   | Ball Switch
 Big Sound 		   | ![Big Sound](images/parts/BigSound.png) 		   | Big Sound?
-Heartbeat 		   | ![Heartbeat](images/parts/Heartbeat.png) 		   | Heartbeat Sensor
 Button 			   | ![Button](images/parts/Button.png)				   | PushButton on Breakout board
 Buzzer 			   | ![Buzzer](images/parts/Buzzer.png)				   | Buzzer
 Digital Temp 	   | ![DigitalTemp](images/parts/DigitalTemp.png)	   | Digital Temperature Sensor
@@ -39,9 +38,9 @@ Shock Sensor 	   | ![ShockSensor](images/parts/ShockSensor.png) 	   | Shock Sens
 Small Sound 	   | ![SmallSound](images/parts/SmallSound.png) 	   | Quiet Buzzer?
 SMD_Color 		   | ![SMD_Color](images/parts/SMD_Color.png) 		   | SMD_Color
 SMD_RGB 		   | ![SMD_RGB](images/parts/SMD_RGB.png) 			   | SMD RGB
-Tap Module 		   | ![TapModule](images/parts/TapModule) 			   | Tap Module
+Tap Module 		   | ![TapModule](images/parts/TapModule.png) 		   | Tap Module
 Temp 			   | ![Temp](images/parts/Temp.png) 				   | Temp
-Temp Humidity 	   | ![DHT11](images/parts/TempAndHumidity.png) 	   | DHT sensor
+Temp Humidity 	   | ![DHT11](images/parts/TempAndHumidity.png) 	   | DHT11 breakout board. No pullup necessary. Digital interface using one pin. 2 bytes for temp, 2 bytes for humidity, 1 byte as checksum.
 Tilt Switch 	   | ![TiltSwitch](images/parts/TiltSwitch.png) 	   | Tilt Switch
 Touch Sensor 	   | ![TouchSensor](images/parts/TouchSensor.png) 	   | Detects touch?
 Tracking 		   | ![Tracking](images/parts/Tracking.png) 		   | Tracking
