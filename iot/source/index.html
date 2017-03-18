@@ -1,0 +1,542 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Programming the Cloud </title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          var langs = [];
+            langs.push("shell");
+            langs.push("css");
+            langs.push("html");
+            langs.push("javascript");
+            langs.push("json");
+          setupLanguages( langs );
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell"> Terminal</a>
+              <a href="#" data-language-name="css"> CSS </a>
+              <a href="#" data-language-name="html"> HTML</a>
+              <a href="#" data-language-name="javascript"> Javascript</a>
+              <a href="#" data-language-name="json"> JSON</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+        <div class="content">
+          <h1 id="introduction">Introduction</h1>
+<p>This guide will introduce you to front-end and back-end web
+technologies. Figure 1 show the different technologies we will be using.</p>
+<h1 id="motivation">Motivation</h1>
+<h1 id="the-modern-web">The Modern Web</h1>
+<h2 id="history-of-the-web-10-">History of the Web (10)</h2>
+<h2 id="the-client-server-model-10-">The client-server model (10)</h2>
+<h2 id="the-browser-10-">The Browser (10)</h2>
+<h2 id="web-server-20-">Web Server (20)</h2>
+<h1 id="tools">Tools</h1>
+<h2 id="arduino-ide">Arduino IDE</h2>
+<h2 id="esptool-py">esptool.py</h2>
+<h2 id="aws-ec2">AWS EC2</h2>
+<h2 id="aws-iot">AWS IoT</h2>
+<h2 id="node-js">Node.js</h2>
+<h2 id="mongodb">mongoDB</h2>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<h1 id="iot-experiment">IoT Experiment</h1>
+<h2 id="hello-world">Hello World</h2>
+<pre><code class="highlight shell">require <span class="hljs-string">'kittn'</span>
+
+api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
+</code></pre>
+<pre><code class="highlight js"><span class="hljs-keyword">import</span> kittn
+
+api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
+</code></pre>
+<pre><code class="highlight shell"><span class="hljs-comment"># With shell, you can just pass the correct header with each request</span>
+curl <span class="hljs-string">"api_endpoint_here"</span>
+  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+</blockquote>
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p><code>Authorization: meowmeowmeow</code></p>
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
+<h1 id="kittens">Kittens</h1>
+<h2 id="get-all-kittens">Get All Kittens</h2>
+<pre><code class="highlight css">require &#39;kittn&#39;
+
+api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+api.kittens.get
+</code></pre>
+<pre><code class="highlight html">import kittn
+
+api = kittn.authorize(&#39;meowmeowmeow&#39;)
+api.kittens.get()
+</code></pre>
+<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens"</span>
+  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight js">[
+  {
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Fluffums"</span>,
+    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"calico"</span>,
+    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">7</span>
+  },
+  {
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Isis"</span>,
+    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"unknown"</span>,
+    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">10</span>
+  }
+]
+</code></pre>
+<p>This endpoint retrieves all kittens.</p>
+<h3 id="http-request">HTTP Request</h3>
+<p><code>GET http://example.com/api/kittens</code></p>
+<h3 id="query-parameters">Query Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>include_cats</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
+<pre><code class="highlight css">require &#39;kittn&#39;
+
+api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
+api.kittens.get(2)
+</code></pre>
+<pre><code class="highlight html">import kittn
+
+api = kittn.authorize(&#39;meowmeowmeow&#39;)
+api.kittens.get(2)
+</code></pre>
+<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
+  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre><code class="highlight json">{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Isis"</span></span>,
+  "<span class="hljs-attribute">breed</span>": <span class="hljs-value"><span class="hljs-string">"unknown"</span></span>,
+  "<span class="hljs-attribute">fluffiness</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
+  "<span class="hljs-attribute">cuteness</span>": <span class="hljs-value"><span class="hljs-number">10</span>
+</span>}
+</code></pre>
+<p>This endpoint retrieves a specific kitten.</p>
+<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<h3 id="url-parameters">URL Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to retrieve</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="iot-starter-kit">IoT Starter Kit</h1>
+<aside class="notice">
+  This kit includes all the 
+
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Image</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-Bit Display</td>
+<td><img src="images/parts/1-BitDisplay.png" alt="1BitDisplay"></td>
+<td>7-Segment LED Display</td>
+</tr>
+<tr>
+<td>2-Color LED</td>
+<td><img src="images/parts/2ColorLED.png" alt="2ColorLED"></td>
+<td>2-Color LED</td>
+</tr>
+<tr>
+<td>4-Bit Display</td>
+<td><img src="images/parts/4-BitDisplay.png" alt="4BitDisplay"></td>
+<td>4 7-Segment Display in series</td>
+</tr>
+<tr>
+<td>7-Color Flash</td>
+<td><img src="images/parts/7ColorFlash.png" alt="7ColorFlash"></td>
+<td>7-Color Flash</td>
+</tr>
+<tr>
+<td>8-8 LED Display</td>
+<td><img src="images/parts/8-8Display.png" alt="8-8LED"></td>
+<td>8-8 LED Matrix</td>
+</tr>
+<tr>
+<td>9V Battery Cable</td>
+<td><img src="images/parts/9VBatteryCable.png" alt="9VBatteryCable"></td>
+<td>9V Battery Cable</td>
+</tr>
+<tr>
+<td>1602 LCD Display</td>
+<td><img src="images/parts/1602LCD.png" alt="1602LCDDisplay"></td>
+<td>1602 LCD Display</td>
+</tr>
+<tr>
+<td>Active Buzzer</td>
+<td><img src="images/parts/ActiveBuzzer.png" alt="ActiveBuzzer"></td>
+<td>Active Buzzer</td>
+</tr>
+<tr>
+<td>AdjustableResistor</td>
+<td><img src="images/parts/AdjustableResistor.png" alt="AdjustableResistor"></td>
+<td>aka Potentiometer. Measures position of knob.</td>
+</tr>
+<tr>
+<td>Analog Hall Effect</td>
+<td><img src="images/parts/AnalogHall.png" alt="AnalogHallEffect"></td>
+<td>Analog Hall Effect Sensor</td>
+</tr>
+<tr>
+<td>Analog Temp</td>
+<td><img src="images/parts/AnalogTemp.png" alt="AnalogTemp"></td>
+<td>Analog Temperature Sensor</td>
+</tr>
+<tr>
+<td>Avoid</td>
+<td><img src="images/parts/Avoid.png" alt="Avoid"></td>
+<td>Avoid?</td>
+</tr>
+<tr>
+<td>Ball Switch</td>
+<td><img src="images/parts/BallSwitch.png" alt="BallSwitch"></td>
+<td>Ball Switch</td>
+</tr>
+<tr>
+<td>Ball Switches</td>
+<td><img src="images/parts/BallSwitches.png" alt="BallSwitches"></td>
+<td>Ball Switches not mounted on breakout</td>
+</tr>
+<tr>
+<td>Big Sound</td>
+<td><img src="images/parts/BigSound.png" alt="Big Sound"></td>
+<td>Big Sound?</td>
+</tr>
+<tr>
+<td>Breadboard</td>
+<td><img src="images/parts/Breadboard.png" alt="Breadboard"></td>
+<td>Breadboard</td>
+</tr>
+<tr>
+<td>Button</td>
+<td><img src="images/parts/Button.png" alt="Button"></td>
+<td>PushButton on breakout board</td>
+</tr>
+<tr>
+<td>Button Switch</td>
+<td><img src="images/parts/ButtonSwitch.png" alt="ButtonSwitch"></td>
+<td>Pushbutton not on breakout board</td>
+</tr>
+<tr>
+<td>Buzzer</td>
+<td><img src="images/parts/Buzzer.png" alt="Buzzer"></td>
+<td>Buzzer</td>
+</tr>
+<tr>
+<td>Digital Temp</td>
+<td><img src="images/parts/DigitalTemp.png" alt="DigitalTemp"></td>
+<td>Digital Temperature Sensor</td>
+</tr>
+<tr>
+<td>Dupont Cable</td>
+<td><img src="images/parts/DupontCable.png" alt="DupontCable"></td>
+<td>Jumper wires attached in parallel. Can be peeled apart.</td>
+</tr>
+<tr>
+<td>Flame Sensor</td>
+<td><img src="images/parts/FlameSensor.png" alt="FlameSensor"></td>
+<td>Flame Sensor?</td>
+</tr>
+<tr>
+<td>Heartbeat</td>
+<td><img src="images/parts/Heartbeat.png" alt="Heartbeat"></td>
+<td>This sensor shine an IR led at an analog IR Receiver. The receiver can detect a pulse by how much light shines through a user&#39;s finger.</td>
+</tr>
+<tr>
+<td>IR Led</td>
+<td><img src="images/parts/IRLED.png" alt="IR_LED"></td>
+<td>IR Led</td>
+</tr>
+<tr>
+<td>IR Phototransistor</td>
+<td><img src="images/parts/IRPhotoTransistor.png" alt="IRPhototransistor"></td>
+<td>Transistor enabled by infrared light.</td>
+</tr>
+<tr>
+<td>IR Receiver</td>
+<td><img src="images/parts/IRReceiver.png" alt="IR_Receiver"></td>
+<td>IR Receiver</td>
+</tr>
+<tr>
+<td>IR Remote</td>
+<td><img src="images/parts/IRRemote.png" alt="IR_Remote"></td>
+<td>Remote that pulses IR light at different time intervals.</td>
+</tr>
+<tr>
+<td>Joystick</td>
+<td><img src="images/parts/Joystick.png" alt="Joystick"></td>
+<td>Joystick</td>
+</tr>
+<tr>
+<td>Laser Emitter</td>
+<td><img src="images/parts/LaserEmit.png" alt="Laser Emitter"></td>
+<td>Laser Emitter</td>
+</tr>
+<tr>
+<td>LEDs</td>
+<td><img src="images/parts/LEDs.png" alt="LEDs"></td>
+<td>3mm LEDs in red, green and yellow.</td>
+</tr>
+<tr>
+<td>Light Blocking</td>
+<td><img src="images/parts/LightBlocking.png" alt="LightBlocking"></td>
+<td>Light Blocking Sensor?</td>
+</tr>
+<tr>
+<td>Linear Hall</td>
+<td><img src="images/parts/LinearHall.png" alt="LinearHall"></td>
+<td>Linear Hall Effect Sensor</td>
+</tr>
+<tr>
+<td>LM35 Temperature</td>
+<td><img src="images/parts/LM35TempSensor.png" alt="LM35 Temp"></td>
+<td>Analog temperature sensor that looks like transistor.</td>
+</tr>
+<tr>
+<td>Mini Reed</td>
+<td><img src="images/parts/MiniReed.png" alt="MiniReed"></td>
+<td>Mini Reed Switch</td>
+</tr>
+<tr>
+<td>Passive Buzzer</td>
+<td><img src="images/parts/PassiveBuzzer.png" alt="Passive Buzzer"></td>
+<td>Passive Buzzer</td>
+</tr>
+<tr>
+<td>Passive Buzzers</td>
+<td><img src="images/parts/PassiveBuzzer_NoBreakout.png" alt="Passive Buzzers"></td>
+<td>Passive buzzers not on breakout boards.</td>
+</tr>
+<tr>
+<td>Photoresistor</td>
+<td><img src="images/parts/Photoresistor.png" alt="Photoresistor"></td>
+<td>A resistor that decreases in resistance when under light</td>
+</tr>
+<tr>
+<td>Reed Switch</td>
+<td><img src="images/parts/ReedSwitch.png" alt="Reed Switch"></td>
+<td>Reed Switch</td>
+</tr>
+<tr>
+<td>Relay</td>
+<td><img src="images/parts/Relay.png" alt="Relay"></td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>Resistor</td>
+<td><img src="images/parts/Resistors.png" alt="Resistors"></td>
+<td>Blue, 5-band resistors. 220, 1k and 10k ohms.</td>
+</tr>
+<tr>
+<td>Rotary Encoder</td>
+<td><img src="images/parts/RotaryEncoder.png" alt="Rotary Encoder"></td>
+<td>Rotary Encoder</td>
+</tr>
+<tr>
+<td>Servo</td>
+<td><img src="images/parts/Servo.png" alt="Servo"></td>
+<td>Servo</td>
+</tr>
+<tr>
+<td>Shift Register</td>
+<td><img src="images/parts/ShiftRegister.png" alt="ShiftRegister"></td>
+<td>TI Shift Register (useful for controlling 7-segment displays or 8 by 8 LED matrix)</td>
+</tr>
+<tr>
+<td>Shock Sensor</td>
+<td><img src="images/parts/ShockSensor.png" alt="ShockSensor"></td>
+<td>Shock Sensor</td>
+</tr>
+<tr>
+<td>Small Sound</td>
+<td><img src="images/parts/SmallSound.png" alt="SmallSound"></td>
+<td>Quiet Buzzer?</td>
+</tr>
+<tr>
+<td>SMD_Color</td>
+<td><img src="images/parts/SMD_Color.png" alt="SMD_Color"></td>
+<td>SMD_Color</td>
+</tr>
+<tr>
+<td>SMD_RGB</td>
+<td><img src="images/parts/SMD_RGB.png" alt="SMD_RGB"></td>
+<td>SMD RGB</td>
+</tr>
+<tr>
+<td>StepperMotor</td>
+<td><img src="images/parts/StepperMotor.png" alt="StepperMotor"></td>
+<td>Stepper motor and driver shield</td>
+</tr>
+<tr>
+<td>Tap Module</td>
+<td><img src="images/parts/TapModule.png" alt="TapModule"></td>
+<td>Tap Module</td>
+</tr>
+<tr>
+<td>Temp</td>
+<td><img src="images/parts/Temp.png" alt="Temp"></td>
+<td>Temp</td>
+</tr>
+<tr>
+<td>Temp Humidity</td>
+<td><img src="images/parts/TempAndHumidity.png" alt="DHT11"></td>
+<td>DHT11 breakout board. No pullup necessary. Digital interface using one pin. 2 bytes for temp, 2 bytes for humidity, 1 byte as checksum.</td>
+</tr>
+<tr>
+<td>Tilt Switch</td>
+<td><img src="images/parts/TiltSwitch.png" alt="TiltSwitch"></td>
+<td>Tilt Switch</td>
+</tr>
+<tr>
+<td>Touch Sensor</td>
+<td><img src="images/parts/TouchSensor.png" alt="TouchSensor"></td>
+<td>Detects touch?</td>
+</tr>
+<tr>
+<td>Tracking</td>
+<td><img src="images/parts/Tracking.png" alt="Tracking"></td>
+<td>Tracking</td>
+</tr>
+<tr>
+<td>WemosD1Mini</td>
+<td><img src="images/parts/WemosD1Mini.png" alt="WemosD1Mini"></td>
+<td>Prototyping board based on the ESP8266</td>
+</tr>
+</tbody>
+</table>
+<h1 id="iot-starter-class">IoT Starter Class</h1>
+<aside class="notice">
+
+</aside>
+
+<p>Upcoming Classes:</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feb 17-19 2017</td>
+<td></td>
+</tr>
+<tr>
+<td>Mar 31-Apr 2 2017</td>
+<td></td>
+</tr>
+<tr>
+<td>May 5-7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+        </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+              <a href="#" data-language-name="shell"> Terminal</a>
+              <a href="#" data-language-name="css"> CSS </a>
+              <a href="#" data-language-name="html"> HTML</a>
+              <a href="#" data-language-name="javascript"> Javascript</a>
+              <a href="#" data-language-name="json"> JSON</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
