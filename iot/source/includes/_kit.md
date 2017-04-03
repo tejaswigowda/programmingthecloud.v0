@@ -43,6 +43,7 @@ LEDs 			   | ![LEDs](images/parts/LEDs.png)					   | 3mm LEDs in red, green and 
 Light Blocking	   | ![LightBlocking](images/parts/LightBlocking.png)  | Light Blocking Sensor?
 Linear Hall 	   | ![LinearHall](images/parts/LinearHall.png) 	   | Linear Hall Effect Sensor
 LM35 Temperature   | ![LM35 Temp](images/parts/LM35TempSensor.png) 	   | Analog temperature sensor that looks like transistor.
+MCP3008			   | ![MCP3008](images/parts/MCP3008.png)			   | 8-channel 10-bit analog to digital converter. Interfaces via SPI.
 Mini Reed 		   | ![MiniReed](images/parts/MiniReed.png)			   | Mini Reed Switch
 Passive Buzzer 	   | ![Passive Buzzer](images/parts/PassiveBuzzer.png) | Passive Buzzer
 Passive Buzzers    | ![Passive Buzzers](images/parts/PassiveBuzzer_NoBreakout.png) | Passive buzzers not on breakout boards.
