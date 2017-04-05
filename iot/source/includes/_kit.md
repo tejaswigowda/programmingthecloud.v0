@@ -18,7 +18,7 @@ Part | Image | Description
 9V Battery Cable   | ![9VBatteryCable](images/parts/9VBatteryCable.png)| 9V Battery Cable
 1602 LCD Display   | ![1602LCDDisplay](images/parts/1602LCD.png)	   | 1602 LCD Display
 Active Buzzer 	   | ![ActiveBuzzer](images/parts/ActiveBuzzer.png)	   | Active Buzzer
-AdjustableResistor | ![AdjustableResistor](images/parts/AdjustableResistor.png) | aka Potentiometer. Indicates position of know by measuring voltage output.
+AdjustableResistor | ![AdjustableResistor](images/parts/AdjustableResistor.png) | aka Potentiometer. Indicates position of knob by measuring voltage output.
 Analog Hall Effect | ![AnalogHallEffect](images/parts/AnalogHall.png)  | Analog Hall Effect Sensor
 Analog Temp 	   | ![AnalogTemp](images/parts/AnalogTemp.png) 	   | Analog Temperature Sensor
 Avoid 			   | ![Avoid](images/parts/Avoid.png) 				   | Avoid?
