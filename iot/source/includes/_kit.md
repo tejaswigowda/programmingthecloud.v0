@@ -12,10 +12,10 @@ Part | Image | Description
 ---------- | -------
 1-Bit Display 	   | ![1BitDisplay](images/parts/1-BitDisplay.png)	   | 7-Segment LED Display
 2-Color LED 	   | ![2ColorLED](images/parts/2ColorLED.png) 	   	   | 2-Color LED
-4-Bit Display 	   | ![4BitDisplay](images/parts/4-BitDisplay.png)      | 4 7-Segment Display in series
+4-Bit Display 	   | ![4BitDisplay](images/parts/4-BitDisplay.png)     | 4 7-Segment Display in series
 7-Color Flash 	   | ![7ColorFlash](images/parts/7ColorFlash.png) 	   | 7-Color Flash
 8-8 LED Display    | ![8-8LED](images/parts/8-8Display.png)			   | 8-8 LED Matrix
-9V Battery Cable   | ![9VBatteryCable](images/parts/9VBatteryCable.png) | 9V Battery Cable
+9V Battery Cable   | ![9VBatteryCable](images/parts/9VBatteryCable.png)| 9V Battery Cable
 1602 LCD Display   | ![1602LCDDisplay](images/parts/1602LCD.png)	   | 1602 LCD Display
 Active Buzzer 	   | ![ActiveBuzzer](images/parts/ActiveBuzzer.png)	   | Active Buzzer
 AdjustableResistor | ![AdjustableResistor](images/parts/AdjustableResistor.png) | aka Potentiometer. Measures position of knob.
@@ -23,7 +23,7 @@ Analog Hall Effect | ![AnalogHallEffect](images/parts/AnalogHall.png)  | Analog 
 Analog Temp 	   | ![AnalogTemp](images/parts/AnalogTemp.png) 	   | Analog Temperature Sensor
 Avoid 			   | ![Avoid](images/parts/Avoid.png) 				   | Avoid?
 Ball Switch 	   | ![BallSwitch](images/parts/BallSwitch.png)		   | Ball Switch
-Ball Switches 	   | ![BallSwitches](images/parts/BallSwitches.png)   | Ball Switches not mounted on breakout
+Ball Switches 	   | ![BallSwitches](images/parts/BallSwitches.png)    | Ball Switches not mounted on breakout
 Big Sound 		   | ![Big Sound](images/parts/BigSound.png) 		   | Big Sound?
 Breadboard 		   | ![Breadboard](images/parts/Breadboard.png)		   | Breadboard
 Button 			   | ![Button](images/parts/Button.png)				   | PushButton on breakout board
@@ -65,4 +65,4 @@ Temp Humidity 	   | ![DHT11](images/parts/TempAndHumidity.png) 	   | DHT11 break
 Tilt Switch 	   | ![TiltSwitch](images/parts/TiltSwitch.png) 	   | Tilt Switch
 Touch Sensor 	   | ![TouchSensor](images/parts/TouchSensor.png) 	   | Detects touch?
 Tracking 		   | ![Tracking](images/parts/Tracking.png) 		   | Tracking
-WemosD1Mini 	   | ![WemosD1Mini](images/parts/WemosD1Mini.png)	   | Prototyping board based on the ESP8266
+NodeMCU1.0		   | ![Node](images/parts/NodeMCU1.0.png)			   | NodeMCU 1.0 WiFi-enabled microcontroller
