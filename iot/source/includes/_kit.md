@@ -40,7 +40,7 @@ LEDs 			   | ![LEDs](images/parts/LEDs.png)					   | 3mm LEDs in red, green and 
 Photo Gate		   | ![Photo Gate](images/parts/LightBlocking.png)     | Detects when a user blocks light from the 2 sides of the sensor. a.k.a Photo interrupter, photodiode or phototransistor
 Linear Hall 	   | ![LinearHall](images/parts/LinearHall.png) 	   | The output voltage varies with intensity of a nearby magnetic field (keep strong magnets away from your microcontroller!). This breakout also has digital output.
 LM35 Temperature   | ![LM35 Temp](images/parts/LM35TempSensor.png) 	   | Analog temperature sensor (that looks like transistor).
-MCP3008			   | ![MCP3008](images/parts/MCP3008.png)			   | 8-channel 10-bit analog to digital converter. Interfaces via SPI.
+MCP3008			   | ![MCP3008](images/parts/MCP3008.png)			   | 8-channel 10-bit analog to digital converter. Interfaces over SPI.
 Mini Reed Switch   | ![MiniReed](images/parts/MiniReed.png)			   | A switch that opens or closes depending on the presence of a magnetic field. a.k.a Magnetic Relay
 Motion Sensor 	   | ![Motion Sensor](images/parts/PIR.png) 		   | This is a motion sensor that detects movement by detected changes in IR. It has an analog output.
 Passive Buzzer 	   | ![Passive Buzzer](images/parts/PassiveBuzzer.png) | This buzzer produces sound when given a sound signal. It is mounted on a breakout.
