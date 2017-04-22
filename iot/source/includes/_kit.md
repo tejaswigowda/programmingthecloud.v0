@@ -15,7 +15,6 @@ Part | Image | Description
 4-Bit Display 	   | ![4BitDisplay](images/parts/4-BitDisplay.png)     | 4 7-Segment Display in series
 7-Color Flash 	   | ![7ColorFlash](images/parts/7ColorFlash.png) 	   | An LED breakout that automatically flashes 7 different colors when enabled.
 8x8 LED Display    | ![8x8LED](images/parts/8-8Display.png)			   | 8x8 LED Matrix. Controlled using a technique called "Charlieplexing"
-9V Battery Cable   | ![9VBatteryCable](images/parts/9VBatteryCable.png)| 9V Battery Cable (9v battery IS included!)
 1602 LCD Display   | ![1602LCDDisplay](images/parts/1602LCD.png)	   | 1602 LCD Display
 Active Buzzer 	   | ![ActiveBuzzer](images/parts/ActiveBuzzer.png)	   | This buzzer makes a beeping sound when enabled.
 AdjustableResistor | ![AdjustableResistor](images/parts/AdjustableResistor.png) | aka Potentiometer. Indicates position of knob by measuring voltage output.
@@ -28,7 +27,6 @@ Big Microphone 	   | ![Big Mic](images/parts/BigSound.png) 		   	   | Larger of 
 Breadboard 		   | ![Breadboard](images/parts/Breadboard.png)		   | Breadboard
 Button 			   | ![Button](images/parts/Button.png)				   | PushButton on breakout board. This has pull-down resistors onboard.
 Button Switch 	   | ![ButtonSwitch](images/parts/ButtonSwitch.png)    | Pushbutton not on a breakout board. Pull-down resistors not included.
-Camera Module 	   | ![Camera](images/parts/0v7670.png)				   | This is the 0v7670 camera module. It has a resolution of 640x480 pixels. It interfaces over a protocol similar to I2c.
 Digital Temp 	   | ![DigitalTemp](images/parts/DigitalTemp.png)	   | Digital Temperature Sensor
 Dupont Cable 	   | ![DupontCable](images/parts/DupontCable.png)	   | Jumper wires attached in parallel. Can be peeled apart.
 Heartbeat 		   | ![Heartbeat](images/parts/Heartbeat.png) 		   | This sensor shines an IR led at an analog IR Receiver. The receiver can detect a pulse by how much light shines through a user's finger.
