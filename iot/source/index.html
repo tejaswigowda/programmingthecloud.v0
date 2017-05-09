@@ -230,7 +230,7 @@ api.kittens.get(2)
 <tr>
 <td>2-Color LED</td>
 <td><img src="images/parts/2ColorLED.png" alt="2ColorLED"></td>
-<td>2-Color LED</td>
+<td>2-Color LED. Red when LOW, green (or yellow) when HIGH.</td>
 </tr>
 <tr>
 <td>4-Bit Display</td>
@@ -240,17 +240,12 @@ api.kittens.get(2)
 <tr>
 <td>7-Color Flash</td>
 <td><img src="images/parts/7ColorFlash.png" alt="7ColorFlash"></td>
-<td>7-Color Flash</td>
+<td>An LED breakout that automatically flashes 7 different colors when enabled.</td>
 </tr>
 <tr>
-<td>8-8 LED Display</td>
-<td><img src="images/parts/8-8Display.png" alt="8-8LED"></td>
-<td>8-8 LED Matrix</td>
-</tr>
-<tr>
-<td>9V Battery Cable</td>
-<td><img src="images/parts/9VBatteryCable.png" alt="9VBatteryCable"></td>
-<td>9V Battery Cable</td>
+<td>8x8 LED Display</td>
+<td><img src="images/parts/8-8Display.png" alt="8x8LED"></td>
+<td>8x8 LED Matrix. Controlled using a technique called &quot;Charlieplexing&quot;</td>
 </tr>
 <tr>
 <td>1602 LCD Display</td>
@@ -260,32 +255,32 @@ api.kittens.get(2)
 <tr>
 <td>Active Buzzer</td>
 <td><img src="images/parts/ActiveBuzzer.png" alt="ActiveBuzzer"></td>
-<td>Active Buzzer</td>
+<td>This buzzer makes a beeping sound when enabled.</td>
 </tr>
 <tr>
 <td>AdjustableResistor</td>
 <td><img src="images/parts/AdjustableResistor.png" alt="AdjustableResistor"></td>
-<td>aka Potentiometer. Measures position of knob.</td>
+<td>aka Potentiometer. Indicates position of knob by measuring voltage output.</td>
 </tr>
 <tr>
 <td>Analog Hall Effect</td>
 <td><img src="images/parts/AnalogHall.png" alt="AnalogHallEffect"></td>
-<td>Analog Hall Effect Sensor</td>
+<td>The voltage output of this sensor varies with intensity of a nearby magnetic field. (Keep strong magnets away from your microcontroller!)</td>
 </tr>
 <tr>
 <td>Analog Temp</td>
 <td><img src="images/parts/AnalogTemp.png" alt="AnalogTemp"></td>
-<td>Analog Temperature Sensor</td>
+<td>Output voltage of this analog sensor varies according to temperature.</td>
 </tr>
 <tr>
-<td>Avoid</td>
+<td>Avoidance</td>
 <td><img src="images/parts/Avoid.png" alt="Avoid"></td>
-<td>Avoid?</td>
+<td>Thus sensor detects nearby objects that reflect IR light. It emits IR and a receiver onboard detects how much is reflected by objects close by.</td>
 </tr>
 <tr>
 <td>Ball Switch</td>
 <td><img src="images/parts/BallSwitch.png" alt="BallSwitch"></td>
-<td>Ball Switch</td>
+<td>A ball inside this sensor will touch contacts and complete a circuit when tilted, thereby producing a signal.</td>
 </tr>
 <tr>
 <td>Ball Switches</td>
@@ -293,9 +288,9 @@ api.kittens.get(2)
 <td>Ball Switches not mounted on breakout</td>
 </tr>
 <tr>
-<td>Big Sound</td>
-<td><img src="images/parts/BigSound.png" alt="Big Sound"></td>
-<td>Big Sound?</td>
+<td>Big Microphone</td>
+<td><img src="images/parts/BigSound.png" alt="Big Mic"></td>
+<td>Larger of 2 digital microphones included in the kit. It has digital and analog outputs.</td>
 </tr>
 <tr>
 <td>Breadboard</td>
@@ -305,17 +300,12 @@ api.kittens.get(2)
 <tr>
 <td>Button</td>
 <td><img src="images/parts/Button.png" alt="Button"></td>
-<td>PushButton on breakout board</td>
+<td>PushButton on breakout board. This has pull-down resistors onboard.</td>
 </tr>
 <tr>
 <td>Button Switch</td>
 <td><img src="images/parts/ButtonSwitch.png" alt="ButtonSwitch"></td>
-<td>Pushbutton not on breakout board</td>
-</tr>
-<tr>
-<td>Buzzer</td>
-<td><img src="images/parts/Buzzer.png" alt="Buzzer"></td>
-<td>Buzzer</td>
+<td>Pushbutton not on a breakout board. Pull-down resistors not included.</td>
 </tr>
 <tr>
 <td>Digital Temp</td>
@@ -328,14 +318,9 @@ api.kittens.get(2)
 <td>Jumper wires attached in parallel. Can be peeled apart.</td>
 </tr>
 <tr>
-<td>Flame Sensor</td>
-<td><img src="images/parts/FlameSensor.png" alt="FlameSensor"></td>
-<td>Flame Sensor?</td>
-</tr>
-<tr>
 <td>Heartbeat</td>
 <td><img src="images/parts/Heartbeat.png" alt="Heartbeat"></td>
-<td>This sensor shine an IR led at an analog IR Receiver. The receiver can detect a pulse by how much light shines through a user&#39;s finger.</td>
+<td>This sensor shines an IR led at an analog IR Receiver. The receiver can detect a pulse by how much light shines through a user&#39;s finger.</td>
 </tr>
 <tr>
 <td>IR Led</td>
@@ -350,7 +335,7 @@ api.kittens.get(2)
 <tr>
 <td>IR Receiver</td>
 <td><img src="images/parts/IRReceiver.png" alt="IR_Receiver"></td>
-<td>IR Receiver</td>
+<td>Analog sensor outputting variable voltage depending on IR intensity.</td>
 </tr>
 <tr>
 <td>IR Remote</td>
@@ -360,7 +345,7 @@ api.kittens.get(2)
 <tr>
 <td>Joystick</td>
 <td><img src="images/parts/Joystick.png" alt="Joystick"></td>
-<td>Joystick</td>
+<td>This sensor has 2 analog outputs indicating position of joystick in 2 axis.</td>
 </tr>
 <tr>
 <td>Laser Emitter</td>
@@ -373,29 +358,39 @@ api.kittens.get(2)
 <td>3mm LEDs in red, green and yellow.</td>
 </tr>
 <tr>
-<td>Light Blocking</td>
-<td><img src="images/parts/LightBlocking.png" alt="LightBlocking"></td>
-<td>Light Blocking Sensor?</td>
+<td>Photo Gate</td>
+<td><img src="images/parts/LightBlocking.png" alt="Photo Gate"></td>
+<td>Detects when a user blocks light from the 2 sides of the sensor. a.k.a Photo interrupter, photodiode or phototransistor</td>
 </tr>
 <tr>
 <td>Linear Hall</td>
 <td><img src="images/parts/LinearHall.png" alt="LinearHall"></td>
-<td>Linear Hall Effect Sensor</td>
+<td>The output voltage varies with intensity of a nearby magnetic field (keep strong magnets away from your microcontroller!). This breakout also has digital output.</td>
 </tr>
 <tr>
 <td>LM35 Temperature</td>
 <td><img src="images/parts/LM35TempSensor.png" alt="LM35 Temp"></td>
-<td>Analog temperature sensor that looks like transistor.</td>
+<td>Analog temperature sensor (that looks like transistor).</td>
 </tr>
 <tr>
-<td>Mini Reed</td>
-<td><img src="images/parts/MiniReed.png" alt="MiniReed"></td>
+<td>MCP3008</td>
+<td><img src="images/parts/MCP3008.png" alt="MCP3008"></td>
+<td>8-channel 10-bit analog to digital converter. Interfaces over SPI.</td>
+</tr>
+<tr>
 <td>Mini Reed Switch</td>
+<td><img src="images/parts/MiniReed.png" alt="MiniReed"></td>
+<td>A switch that opens or closes depending on the presence of a magnetic field. a.k.a Magnetic Relay</td>
+</tr>
+<tr>
+<td>Motion Sensor</td>
+<td><img src="images/parts/PIR.png" alt="Motion Sensor"></td>
+<td>This is a motion sensor that detects movement by detected changes in IR. It has an analog output.</td>
 </tr>
 <tr>
 <td>Passive Buzzer</td>
 <td><img src="images/parts/PassiveBuzzer.png" alt="Passive Buzzer"></td>
-<td>Passive Buzzer</td>
+<td>This buzzer produces sound when given a sound signal. It is mounted on a breakout.</td>
 </tr>
 <tr>
 <td>Passive Buzzers</td>
@@ -405,17 +400,22 @@ api.kittens.get(2)
 <tr>
 <td>Photoresistor</td>
 <td><img src="images/parts/Photoresistor.png" alt="Photoresistor"></td>
-<td>A resistor that decreases in resistance when under light</td>
+<td>A resistor breakout that decreases in resistance when under light. Photoresistors alone are also included.</td>
+</tr>
+<tr>
+<td>Proximity Sensor</td>
+<td><img src="images/parts/proximity.png" alt="Proximity"></td>
+<td>This sensor detects the proximity of nearby objects by emitting ultrasonic sound wave and measuring the time it takes for them to reflect back.</td>
 </tr>
 <tr>
 <td>Reed Switch</td>
 <td><img src="images/parts/ReedSwitch.png" alt="Reed Switch"></td>
-<td>Reed Switch</td>
+<td>A switch that opens or closes depending on the presence of a magnetic field. a.k.a Magnetic Relay</td>
 </tr>
 <tr>
 <td>Relay</td>
 <td><img src="images/parts/Relay.png" alt="Relay"></td>
-<td>Relay</td>
+<td>This can open or close a separate, high-voltage circuit when given the proper input signal.</td>
 </tr>
 <tr>
 <td>Resistor</td>
@@ -425,77 +425,67 @@ api.kittens.get(2)
 <tr>
 <td>Rotary Encoder</td>
 <td><img src="images/parts/RotaryEncoder.png" alt="Rotary Encoder"></td>
-<td>Rotary Encoder</td>
+<td>This is a potentiometer that has continuous rotation and indicates its position with less resolution. It is also on a breakout board.</td>
 </tr>
 <tr>
 <td>Servo</td>
 <td><img src="images/parts/Servo.png" alt="Servo"></td>
-<td>Servo</td>
+<td>This sevo has 180 degress of motion. A PWM signal tells it was direction to point and its onboard MCU handles the rest.</td>
 </tr>
 <tr>
 <td>Shift Register</td>
 <td><img src="images/parts/ShiftRegister.png" alt="ShiftRegister"></td>
-<td>TI Shift Register (useful for controlling 7-segment displays or 8 by 8 LED matrix)</td>
+<td>Texas Instruments Shift Register (useful for controlling 7-segment displays or 8 by 8 LED matrix, among many other things!)</td>
 </tr>
 <tr>
 <td>Shock Sensor</td>
 <td><img src="images/parts/ShockSensor.png" alt="ShockSensor"></td>
-<td>Shock Sensor</td>
+<td>This sensor is basically a switch that is closed when rapidly moved. Inside is a wire within a spring that, when shaken, contacts the spring and closes a circuit.</td>
 </tr>
 <tr>
-<td>Small Sound</td>
+<td>Small Microphone</td>
 <td><img src="images/parts/SmallSound.png" alt="SmallSound"></td>
-<td>Quiet Buzzer?</td>
-</tr>
-<tr>
-<td>SMD_Color</td>
-<td><img src="images/parts/SMD_Color.png" alt="SMD_Color"></td>
-<td>SMD_Color</td>
+<td>This is the smaller of 2 digital microphones included in the kit. It has digital and analog outputs.</td>
 </tr>
 <tr>
 <td>SMD_RGB</td>
 <td><img src="images/parts/SMD_RGB.png" alt="SMD_RGB"></td>
-<td>SMD RGB</td>
+<td>SMD_RGB is a surface mount led on a breakout board. Like the other RGB LED in the kit, it is controlled via PWM. Some SMD RGBs are controlled with a 24-bit string of data.</td>
 </tr>
 <tr>
 <td>StepperMotor</td>
 <td><img src="images/parts/StepperMotor.png" alt="StepperMotor"></td>
-<td>Stepper motor and driver shield</td>
+<td>Stepper motor and driver shield. This stepper motor has a resolution of 4096 steps in a full 360-degree rotation.</td>
 </tr>
 <tr>
 <td>Tap Module</td>
 <td><img src="images/parts/TapModule.png" alt="TapModule"></td>
-<td>Tap Module</td>
+<td>A spring inside this sensor vibrates when tapped and will hit conductuctors inside, thereby closing a circuit and producing a signal.</td>
 </tr>
 <tr>
 <td>Temp</td>
 <td><img src="images/parts/Temp.png" alt="Temp"></td>
-<td>Temp</td>
+<td>This is an analog temperature sensor mounted on a breakout board.</td>
 </tr>
 <tr>
 <td>Temp Humidity</td>
 <td><img src="images/parts/TempAndHumidity.png" alt="DHT11"></td>
-<td>DHT11 breakout board. No pullup necessary. Digital interface using one pin. 2 bytes for temp, 2 bytes for humidity, 1 byte as checksum.</td>
-</tr>
-<tr>
-<td>Tilt Switch</td>
-<td><img src="images/parts/TiltSwitch.png" alt="TiltSwitch"></td>
-<td>Tilt Switch</td>
+<td>A DHT11 sensor on a breakout board. No pull-up resistor is necessary. It has an asynchronous, half duplex control on only 1 wire.</td>
 </tr>
 <tr>
 <td>Touch Sensor</td>
 <td><img src="images/parts/TouchSensor.png" alt="TouchSensor"></td>
-<td>Detects touch?</td>
+<td>Touching this sensor temporary allows current to flow through a transistor, creating a signal.</td>
 </tr>
 <tr>
 <td>Tracking</td>
 <td><img src="images/parts/Tracking.png" alt="Tracking"></td>
-<td>Tracking</td>
+<td>This is another tracking sensor that only has an analog output. It emits IR light and a receiver detects how much is reflected by objects close by.</td>
 </tr>
 <tr>
-<td>WemosD1Mini</td>
-<td><img src="images/parts/WemosD1Mini.png" alt="WemosD1Mini"></td>
-<td>Prototyping board based on the ESP8266</td>
+<td>NodeMCU1.0</td>
+<td><img src="images/parts/NodeMCU1.0.png" alt="Node"></td>
+<td>NodeMCU 1.0 WiFi-enabled microcontroller</td>
 </tr>
 </tbody>
 </table>
