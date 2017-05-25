@@ -28,7 +28,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -40,10 +40,10 @@
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<!-- 
-	Default Theme Style 
+	<!--
+	Default Theme Style
 	You can change the style.css (default color purple) to one of these styles
-	
+
 	1. pink.css
 	2. blue.css
 	3. turquoise.css
@@ -62,7 +62,7 @@
 
 	<style>
 	/* For demo purpose only */
-	
+
 	/* For Demo Purposes Only ( You can delete this anytime :-) */
 	#colour-variations {
 		padding: 10px;
@@ -132,7 +132,7 @@
 		zoom: 1;
 		*display: inline;
 	}
-	
+
 
 	.option-toggle {
 		position: absolute;
@@ -182,7 +182,7 @@
 		        <div class="navbar-header">
 		        	<!-- Mobile Toggle Menu Button -->
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		         <a class="navbar-brand" href="index.html">Programming the Cloud</a> 
+		         <a class="navbar-brand" href="index.html">Programming the Cloud</a>
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav navbar-right">
@@ -206,7 +206,7 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">Learn to program</h1>
+							<div id="cloud" class="to-animate"> </div>
               <h2 class="to-animate">Responsive Websites, apps, web servers, databases, microcontrollers and full-stack platforms</h2>
 						</div>
 					</div>
@@ -224,9 +224,26 @@
 					<div class="overlay"></div>
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-bulb"></i>
-						<h2>Full stack</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#" class="btn btn-primary">Get In Touch</a></p>
+						<h2>Full stack Web Development</h2>
+						<p style="font-size:20px;"> Front-end tech: </p>
+								<ul style="text-align:left;">
+									<li>HTML5: Semantic web</li>
+									<li>CSS3: LESS, Media Queries</li>
+									<li>JavaScript: jQuery, AngularJS, etc.</li>
+									<li>Compatibility quirks across browsers</li>
+									<li>Responsive design</li>
+									<li>AJAX, JSON, XML</li>
+								</ul>
+						<p style="font-size:20px;"> Back-end tech: </p>
+								<ul style="text-align:left;">
+									<li>Web server: Node.js</li>
+									<li>Programming language: Javascript</li>
+									<li>Database: MongoDB [NoSQL]</li>
+								</ul>
+					 <p style="font-size:20px;"> Mobile Apps </p>
+					 <p> Utilize <a href="http://cordova.apache.org/">Apache Cordova</a> to package apps built on modern web technologies</p>
+						<p><a href="#" class="btn btn-primary">Lets Go!</a></p>
+
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
@@ -234,9 +251,15 @@
 					<div class="overlay"></div>
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-wrench"></i>
-						<h2>Apps</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#" class="btn btn-primary">Click Me</a></p>
+						<h2>Development Tools</h2>
+						<ul style="text-align:left;">
+							<li>Hosting Plateform: Amazon Web Services (AWS)</li>
+							<li>Environment: Linux/Unix</li>
+							<li>Command Lamnguage: Bash</li>
+							<li>Code Hosting: GitHub/ BitBucket </li>
+							<li>Version Conrol System: Git </li>
+						</ul>
+						<p><a href="#" class="btn btn-primary">Lets Go!</a></p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/img_10.jpg);">
@@ -245,16 +268,22 @@
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-rocket"></i>
 						<h2>Internet of Things</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<p><a href="#" class="btn btn-primary">Why Us?</a></p>
+						<p> Learn the basics of programming micro chips and internet enabled devices.</p>
+						<ul style="text-align:left;">
+							<li>Example 1 </li>
+							<li>Eample 2 </li>
+							<li>Example 3 </li>
+						</ul>
+						<p><a href="#" class="btn btn-primary">Lets Go!</a></p>
 					</div>
 				</div>
 			</div>
-			<div class="row watch-video text-center to-animate">
+			<!-------------------------------------------------------------------- Watch the video ----------------------------------------------------------------------->
+			<!-- <div class="row watch-video text-center to-animate">
 				<span>Watch the video</span>
 
 				<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo btn-video"><i class="icon-play2"></i></a>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -310,7 +339,7 @@
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="clearfix visible-sm-block"></div>
 
 				<div class="col-md-4 col-sm-6 col-xxs-12">
@@ -331,7 +360,7 @@
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="clearfix visible-sm-block"></div>
 
 				<div class="col-md-4 col-sm-6 col-xxs-12">
@@ -426,8 +455,8 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 			</div>
 		</div>
 	</section>
@@ -469,11 +498,11 @@
 					<h3>CMS &amp; eCommerce</h3>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
 				</div>
-				
+
 			</div>
 		</div>
 	</section>
-	
+
 	<section id="fh5co-about" data-section="about">
 		<div class="container">
 			<div class="row">
@@ -529,8 +558,8 @@
 			</div>
 		</div>
 	</section>
-	
-	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+
+	<!-- <section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
 		<div class="fh5co-overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -569,7 +598,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="fh5co-contact" data-section="contact">
 		<div class="container">
@@ -623,17 +652,17 @@
 
 			</div>
 		</div>
-		<div id="map" class="to-animate"></div>
+		<!-- <div id="map" class="to-animate"></div> -->
 	</section>
-	
-	
+
+
 	<footer id="footer" role="contentinfo">
 		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
 		<div class="container">
 			<div class="">
 				<div class="col-md-12 text-center">
 					<p>&copy; Elate Free HTML5. All Rights Reserved. <br>Created by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Images: <a href="http://pexels.com/" target="_blank">Pexels</a>, <a href="http://plmd.me/" target="_blank">plmd.me</a></p>
-					
+
 				</div>
 			</div>
 			<div class="row">
@@ -647,8 +676,8 @@
 			</div>
 		</div>
 	</footer>
-	
-	
+
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -679,7 +708,7 @@
 		          	expires: 30,
 		          	isManagingLoad: true
 		      	}
-			});	
+			});
 			$('.option-toggle').click(function() {
 				$('#colour-variations').toggleClass('sleep');
 			});
@@ -692,4 +721,3 @@
 
 	</body>
 </html>
-
