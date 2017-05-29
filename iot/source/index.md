@@ -53,7 +53,8 @@ every http GET request.
 
 <aside class="notice">
  <i> Client server model </i>
-<br>
+
+
 <img
 src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
 align="center" height="248" width="auto" >
@@ -70,7 +71,7 @@ how to write 'Web Services' that can interact with your
 Internet-connected Things.
 </aside>
 
-<br>
+
 Starting by installing Node.js ([install instructions](#node-js)) on
 your machine. We will write a server that listens to
 localhost(127.0.0.1) at post 8080 (see aside on URLs).
