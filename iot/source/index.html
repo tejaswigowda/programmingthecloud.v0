@@ -57,23 +57,23 @@
 <p>This guide will introduce you to front-end and back-end web
 technologies. Figure 1 show the different technologies we will be using.</p>
 <h1 id="motivation">Motivation</h1>
-<h1 id="the-modern-web">The Modern Web</h1>
-<h2 id="history-of-the-web-10-">History of the Web (10)</h2>
-<h2 id="the-client-server-model-10-">The client-server model (10)</h2>
-<h2 id="the-browser-10-">The Browser (10)</h2>
-<h2 id="web-server-20-">Web Server (20)</h2>
-<h1 id="tools">Tools</h1>
+<h1 id="tools-technologies">Tools/Technologies</h1>
 <h2 id="arduino-ide">Arduino IDE</h2>
 <h2 id="esptool-py">esptool.py</h2>
 <h2 id="aws-ec2">AWS EC2</h2>
-<h2 id="aws-iot">AWS IoT</h2>
+<h2 id="aws-lambda">AWS Lambda</h2>
 <h2 id="node-js">Node.js</h2>
 <h2 id="mongodb">mongoDB</h2>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<h1 id="iot-experiment">IoT Experiment</h1>
+<h1 id="iot-experiments">IoT Experiments</h1>
 <h2 id="hello-world">Hello World</h2>
+<h3 id="hello-world-server">Hello World - Server</h3>
+<h3 id="hello-world-internet-connected-mcu">Hello World - Internet connected MCU</h3>
+<h2 id="scan-for-wifi-networks">Scan for Wifi Networks</h2>
+<h2 id="turn-on-off-led-via-web-server">Turn on/off LED via Web-server</h2>
+<h2 id="turn-on-off-led-via-internet">Turn on/off LED via Internet</h2>
 <pre><code class="highlight shell">require <span class="hljs-string">'kittn'</span>
 
 api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
@@ -89,122 +89,6 @@ curl <span class="hljs-string">"api_endpoint_here"</span>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-<p><code>Authorization: meowmeowmeow</code></p>
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre><code class="highlight css">require &#39;kittn&#39;
-
-api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-api.kittens.get
-</code></pre>
-<pre><code class="highlight html">import kittn
-
-api = kittn.authorize(&#39;meowmeowmeow&#39;)
-api.kittens.get()
-</code></pre>
-<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight js">[
-  {
-    <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
-    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Fluffums"</span>,
-    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"calico"</span>,
-    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">6</span>,
-    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">7</span>
-  },
-  {
-    <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Isis"</span>,
-    <span class="hljs-string">"breed"</span>: <span class="hljs-string">"unknown"</span>,
-    <span class="hljs-string">"fluffiness"</span>: <span class="hljs-number">5</span>,
-    <span class="hljs-string">"cuteness"</span>: <span class="hljs-number">10</span>
-  }
-]
-</code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id="http-request">HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id="query-parameters">Query Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody>
-</table>
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre><code class="highlight css">require &#39;kittn&#39;
-
-api = Kittn::APIClient.authorize!(&#39;meowmeowmeow&#39;)
-api.kittens.get(2)
-</code></pre>
-<pre><code class="highlight html">import kittn
-
-api = kittn.authorize(&#39;meowmeowmeow&#39;)
-api.kittens.get(2)
-</code></pre>
-<pre><code class="highlight shell">curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight json">{
-  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Isis"</span></span>,
-  "<span class="hljs-attribute">breed</span>": <span class="hljs-value"><span class="hljs-string">"unknown"</span></span>,
-  "<span class="hljs-attribute">fluffiness</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-  "<span class="hljs-attribute">cuteness</span>": <span class="hljs-value"><span class="hljs-number">10</span>
-</span>}
-</code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id="url-parameters">URL Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody>
-</table>
 
 <h1 id="iot-starter-kit">IoT Starter Kit</h1>
 <aside class="notice">
