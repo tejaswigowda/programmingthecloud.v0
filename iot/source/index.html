@@ -38,7 +38,7 @@
               <a href="#" data-language-name="shell"> Terminal</a>
               <a href="#" data-language-name="css"> CSS </a>
               <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="javascript"> Javascript</a>
+              <a href="#" data-language-name="javascript"> Node.js</a>
               <a href="#" data-language-name="json"> JSON</a>
         </div>
         <div class="search">
@@ -70,10 +70,63 @@ technologies. Figure 1 show the different technologies we will be using.</p>
 <h1 id="iot-experiments">IoT Experiments</h1>
 <h2 id="hello-world">Hello World</h2>
 <h3 id="hello-world-server">Hello World - Server</h3>
+<p>  A simple HTTP server that send the string &quot;Hello World&quot; as response to
+every http GET request.</p>
+<aside class="notice">
+ <i> Client server model </i>
+<br>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
+align="center" height="248" width="auto" >
+
+The Client server model is the backbone of the World Wide Web (www) and
+is one of the most important protocols to comminucate withg
+Internet-enabled 'Things'. The server is a program (not necessarily
+running on a 'big' computer, but any Microprocessor/Microcontroller)
+that can receive requests at a specific port, and respond back to the
+client that sent the request. The most common example of this is HTTP
+servers that send file data (HTML, images, js, css etc.) like
+google.com, yahoo.com or any other web server. This guide will teach you
+how to write 'Web Services' that can interact with your
+Internet-connected Things.
+</aside>
+
+<p><br>
+Starting by installing Node.js (<a href="#node-js">install instructions</a>) on
+your machine. We will write a server that listens to
+localhost(127.0.0.1) at post 8080 (see aside on URLs).</p>
+<p><aside class="notice">
+Uniform Resource Locator (URL)
+</aside></p>
 <h3 id="hello-world-internet-connected-mcu">Hello World - Internet connected MCU</h3>
 <h2 id="scan-for-wifi-networks">Scan for Wifi Networks</h2>
 <h2 id="turn-on-off-led-via-web-server">Turn on/off LED via Web-server</h2>
 <h2 id="turn-on-off-led-via-internet">Turn on/off LED via Internet</h2>
+<h2 id="internet-connected-push-button">Internet connected Push Button</h2>
+<h2 id="push-button-to-send-email">Push button to send email</h2>
+<h2 id="push-button-to-send-temperature-humidity-as-email">Push Button to send temperature/humidity as email</h2>
+<h2 id="graphing-temperature-and-humidity">Graphing temperature and humidity</h2>
+<h2 id="logging-sensor-values-in-a-database">Logging sensor values in a database</h2>
+<h2 id="sending-alerts-when-certain-values-are-out-of-range">Sending alerts when certain values are out of range</h2>
+<h2 id="dimming-leds-with-pulse-width-modulation-pwm-">Dimming LEDs with Pulse Width Modulation (PWM)</h2>
+<h2 id="control-rgb-lights">Control RGB lights</h2>
+<h2 id="play-midi-over-the-internet">Play MIDI over the Internet</h2>
+<h2 id="turn-on-off-any-ac-device-using-relay">Turn on/off any AC device using relay</h2>
+<h2 id="control-2-color-led">Control 2 color LED</h2>
+<h2 id="control-1-bit-display">Control 1-bit display</h2>
+<h2 id="use-7-color-flash-to-alert-high-temperature-ir-led-">Use 7 color flash to alert high temperature (IR LED)</h2>
+<h2 id="use-tap-module-to-send-morse-code-to-server">Use Tap module to send morse-code to server</h2>
+<h2 id="automatic-light-switch-with-data-logging-">Automatic light switch (with data logging)</h2>
+<h2 id="motion-switch-with-data-logging-">Motion switch (with data logging)</h2>
+<h2 id="shock-sensors-for-logging-shocks">Shock sensors for logging shocks</h2>
+<h2 id="internet-enabled-touch-switch-with-hot-keys-">Internet enabled touch switch (with hot keys)</h2>
+<h2 id="a-blind-navigation-tool-with-data-logging-">A blind navigation tool (with data logging)</h2>
+<h2 id="control-fan-speed-with-a-magnet-with-data-logging-">Control fan speed with a magnet (with data logging)</h2>
+<h2 id="connected-home-control-leds-with-echo">Connected home --  control LEDs with Echo</h2>
+<h2 id="more-to-come">More to come</h2>
+<p>  The componets in the IoT starter kit can be used for many more
+experiments. If you want your experiment to be featured here, please
+submit your experiment <a href="">here</a>.</p>
 <pre><code class="highlight shell">require <span class="hljs-string">'kittn'</span>
 
 api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
@@ -407,7 +460,7 @@ curl <span class="hljs-string">"api_endpoint_here"</span>
               <a href="#" data-language-name="shell"> Terminal</a>
               <a href="#" data-language-name="css"> CSS </a>
               <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="javascript"> Javascript</a>
+              <a href="#" data-language-name="javascript"> Node.js</a>
               <a href="#" data-language-name="json"> JSON</a>
           </div>
       </div>
