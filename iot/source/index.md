@@ -21,7 +21,7 @@ search: true
 # Introduction
 
 This guide will walk you through the code, technology, hardware and
-steps to 
+step-by-step instructions to:
 - Connect micro-controller unit (focus on ESP 8266) to the Internet. 
 - Control such microcontrollers securely over HTTP protocol (to act in
 the real-world).
@@ -78,19 +78,6 @@ via the Arduino IDE)
 
 
 
-# Prerequisites
-This guide assumes you have intermediate proficiency with the following
-technologies. If you need a refresher or a tutorial check out the
-references (basic overview provided in the next section).
-
-Tool/Technology | References
----- | ----
-Front-end Web technologies (HTML/CSS/JS) | 
-Backend server (Node.js used in this guide) |
-No-Sql Database (mongoDB used in guide) |
-Arduino IDE |
-Hardware | 
-
 # Basics
 This section discusses some concepts that are needed to follow along wit
 this guide. Concepts covered here are cross-referenced throughout the guide.
@@ -110,17 +97,24 @@ running on a 'big' computer, but any Microprocessor/Microcontroller)
 that can receive requests at a specific port, and respond back to the
 client that sent the request. The most common example of this is HTTP
 servers that send file data (HTML, images, js, css etc.) like
-google.com, yahoo.com or any other web server. This guide will teach you
-how to write 'Web Services' that can interact with your
-Internet-connected Things.
-
-<br />
-<br />
-
 Read more: 
 <a href='https://en.wikipedia.org/wiki/Client%E2%80%93server_model'
 target='_blank'> Wikipedia Article </a>.
+google.com, yahoo.com or any other web server. 
 
+This guide will teach you
+how to write 'Web Services' that can interact with your HTML
+web-clients. More importantly it will teach you to write
+micro-controller code that can interact with your web-services
+
+<img
+src="images/newI.png"
+align="center" height="auto" width="100%" >
+
+The rapid growth of internet connected devices (estimated to be 50B in
+2020) will come as a result of
+small everyday devices that can log data and do simple tasks. This guide
+focusses on such examples.
 
 
 ## Uniform Resource Locator (URL)
@@ -129,13 +123,27 @@ target='_blank'> Wikipedia Article </a>.
 src="images/url.png"
 align="center" height="auto" width="100%" >
 
+## Prerequisites
+This guide assumes you have intermediate proficiency with the following
+technologies. If you need a refresher or a tutorial check out the
+references (basic overview provided in the next section).
+
+Tool/Technology | References
+---- | ----
+Front-end Web technologies (HTML/CSS/JS) | [CSS Tutorial](https://www.w3schools.com/jquery/), [HTML5 Tag reference](http://www.w3schools.com/tags/), [jQuery API Reference](http://api.jquery.com/), [Bootstrap JS Reference](http://getbootstrap.com/javascript/), [JS Tutorial](http://www.w3schools.com/js/), [CSS Animations](http://www.w3schools.com/css/css3_animations.asp), [JSON](http://www.json.org/)
+Backend server (Node.js used in this guide) |[Node.js Get Started Documentation](http://nodeguide.com/beginner.html), [Node mongoskin](https://github.com/kissjs/node-mongoskin), [AWS Lightsail](https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/),  
+No-Sql Database (mongoDB used in guide) | 
+Arduino IDE |
+Hardware | 
+
+
 # Tools
 
 ## Arduino IDE
 
 ## esptool.py
 
-## AWS EC2
+## AWS Lightsail
 
 ## AWS Lambda
 

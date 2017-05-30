@@ -51,7 +51,7 @@
         <div class="content">
           <h1 id="introduction">Introduction</h1>
 <p>This guide will walk you through the code, technology, hardware and
-steps to </p>
+step-by-step instructions to:</p>
 <ul>
 <li>Connect micro-controller unit (focus on ESP 8266) to the Internet. </li>
 <li>Control such microcontrollers securely over HTTP protocol (to act in
@@ -100,7 +100,40 @@ via the Arduino IDE)</li>
 <li>Server -- the cloud server that connects and controls the MCU.</li>
 <li>Client -- Simple HTML web-client to display results/analytics.</li>
 </ul>
-<h1 id="prerequisites">Prerequisites</h1>
+<h1 id="basics">Basics</h1>
+<p>This section discusses some concepts that are needed to follow along wit
+this guide. Concepts covered here are cross-referenced throughout the guide.</p>
+<h2 id="the-client-server-model">The Client-Server Model</h2>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
+align="center" height="auto" width="100%" ></p>
+<p>The client-server model is the backbone of the World Wide Web (www) and
+is one of the most important protocols to comminucate withg
+Internet-enabled &#39;Things&#39;. The server is a program (not necessarily
+running on a &#39;big&#39; computer, but any Microprocessor/Microcontroller)
+that can receive requests at a specific port, and respond back to the
+client that sent the request. The most common example of this is HTTP
+servers that send file data (HTML, images, js, css etc.) like
+Read more: 
+<a href='https://en.wikipedia.org/wiki/Client%E2%80%93server_model'
+target='_blank'> Wikipedia Article </a>.
+google.com, yahoo.com or any other web server. </p>
+<p>This guide will teach you
+how to write &#39;Web Services&#39; that can interact with your HTML
+web-clients. More importantly it will teach you to write
+micro-controller code that can interact with your web-services</p>
+<p><img
+src="images/newI.png"
+align="center" height="auto" width="100%" ></p>
+<p>The rapid growth of internet connected devices (estimated to be 50B in
+2020) will come as a result of
+small everyday devices that can log data and do simple tasks. This guide
+focusses on such examples.</p>
+<h2 id="uniform-resource-locator-url-">Uniform Resource Locator (URL)</h2>
+<p><img
+src="images/url.png"
+align="center" height="auto" width="100%" ></p>
+<h2 id="prerequisites">Prerequisites</h2>
 <p>This guide assumes you have intermediate proficiency with the following
 technologies. If you need a refresher or a tutorial check out the
 references (basic overview provided in the next section).</p>
@@ -114,11 +147,11 @@ references (basic overview provided in the next section).</p>
 <tbody>
 <tr>
 <td>Front-end Web technologies (HTML/CSS/JS)</td>
-<td></td>
+<td><a href="https://www.w3schools.com/jquery/">CSS Tutorial</a>, <a href="http://www.w3schools.com/tags/">HTML5 Tag reference</a>, <a href="http://api.jquery.com/">jQuery API Reference</a>, <a href="http://getbootstrap.com/javascript/">Bootstrap JS Reference</a>, <a href="http://www.w3schools.com/js/">JS Tutorial</a>, <a href="http://www.w3schools.com/css/css3_animations.asp">CSS Animations</a>, <a href="http://www.json.org/">JSON</a></td>
 </tr>
 <tr>
 <td>Backend server (Node.js used in this guide)</td>
-<td></td>
+<td><a href="http://nodeguide.com/beginner.html">Node.js Get Started Documentation</a>, <a href="https://github.com/kissjs/node-mongoskin">Node mongoskin</a>, <a href="https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/">AWS Lightsail</a>,  </td>
 </tr>
 <tr>
 <td>No-Sql Database (mongoDB used in guide)</td>
@@ -134,35 +167,10 @@ references (basic overview provided in the next section).</p>
 </tr>
 </tbody>
 </table>
-<h1 id="basics">Basics</h1>
-<p>This section discusses some concepts that are needed to follow along wit
-this guide. Concepts covered here are cross-referenced throughout the guide.</p>
-<h2 id="the-client-server-model">The Client-Server Model</h2>
-<p><img
-src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
-align="center" height="auto" width="100%" ></p>
-<p>The client-server model is the backbone of the World Wide Web (www) and
-is one of the most important protocols to comminucate withg
-Internet-enabled &#39;Things&#39;. The server is a program (not necessarily
-running on a &#39;big&#39; computer, but any Microprocessor/Microcontroller)
-that can receive requests at a specific port, and respond back to the
-client that sent the request. The most common example of this is HTTP
-servers that send file data (HTML, images, js, css etc.) like
-google.com, yahoo.com or any other web server. This guide will teach you
-how to write &#39;Web Services&#39; that can interact with your
-Internet-connected Things.</p>
-<p><br />
-<br /></p>
-<p>Read more: 
-<a href='https://en.wikipedia.org/wiki/Client%E2%80%93server_model'
-target='_blank'> Wikipedia Article </a>.</p>
-<h2 id="uniform-resource-locator-url-">Uniform Resource Locator (URL)</h2>
-<p><img
-src="images/url.png"
-align="center" height="auto" width="100%" ></p>
+<h1 id="tools">Tools</h1>
 <h2 id="arduino-ide">Arduino IDE</h2>
 <h2 id="esptool-py">esptool.py</h2>
-<h2 id="aws-ec2">AWS EC2</h2>
+<h2 id="aws-lightsail">AWS Lightsail</h2>
 <h2 id="aws-lambda">AWS Lambda</h2>
 <h2 id="node-js">Node.js</h2>
 <h2 id="mongodb">mongoDB</h2>
