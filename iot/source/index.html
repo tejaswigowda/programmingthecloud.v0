@@ -15,11 +15,9 @@
       <script>
         $(function() {
           var langs = [];
-            langs.push("shell");
-            langs.push("css");
-            langs.push("html");
+            langs.push("c");
             langs.push("javascript");
-            langs.push("json");
+            langs.push("html");
           setupLanguages( langs );
         });
       </script>
@@ -35,11 +33,9 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell"> Terminal</a>
-              <a href="#" data-language-name="css"> CSS </a>
-              <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="javascript"> Node.js</a>
-              <a href="#" data-language-name="json"> JSON</a>
+              <a href="#" data-language-name="c"> MCU</a>
+              <a href="#" data-language-name="javascript"> Server</a>
+              <a href="#" data-language-name="html"> Client</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -54,10 +50,116 @@
       <div class="dark-box"></div>
         <div class="content">
           <h1 id="introduction">Introduction</h1>
-<p>This guide will introduce you to front-end and back-end web
-technologies. Figure 1 show the different technologies we will be using.</p>
-<h1 id="motivation">Motivation</h1>
-<h1 id="tools-technologies">Tools/Technologies</h1>
+<p>This guide will walk you through the code, technology, hardware and
+steps to </p>
+<ul>
+<li>Connect micro-controller unit (focus on ESP 8266) to the Internet. </li>
+<li>Control such microcontrollers securely over HTTP protocol (to act in
+the real-world).</li>
+<li>Gather data from such micro-controllers into a server/database</li>
+<li>Develop simple web clients to anayze the collected data.</li>
+</ul>
+<p>Why would we need to learn any of this? To understand this we need to
+look at the past, present and future of the Internet. Since it&#39;s
+inception in the 1990&#39;s the commercial Internet has expanded at an
+exponential rate (measured by number of connected devices). Starting
+from server main-frames, moving on to desktop, laptop computers, we now
+have Internet on handheld devices. This trend will continue (powered by
+cheap internect connected MCUs, and secure IoT backbones available on
+demand. See Figure below for one such prediction.</p>
+<p><img
+src="images/iotProjection.png"
+align="center" height="auto" width="100%" ></p>
+<p>This explosion in connected devices will bring in a new era of
+customized connected electronics, vast changes in business logic,
+supply-chain management, AI integration, home automation, media, smart
+cities etc. This guide is concerned with the engine that will largely
+shape the nacest IoT landscape. This guide focusses on programming ESP
+8266 MCU, sensing and actuating these sensors over the Internet (AWS
+services used in guide, but examples can work with any IaaS provider).
+There are even examples of voice activation with Echo!</p>
+<p>Suffice it to say IoT will be a marketable skill over the next few
+years. If you need more motivation read
+<a href="https://www.computer.org/cms/Computer.org/ComputingNow/issues/2015/07/mit2015030002.pdf">this</a>
+<a href="https://www.abiresearch.com/press/more-than-30-billion-devices-will-wirelessly-conne/">this</a>,
+<a href="http://internetofthingsagenda.techtarget.com/feature/Can-we-expect-the-Internet-of-Things-in-healthcare">this</a>,
+<a href="http://www.businessinsider.com/internet-of-everything-2015-bi-2014-12">this</a> and <a href="https://en.wikipedia.org/wiki/Internet_of_things#Applications">references
+of this</a>.</p>
+<p>This guide is organized around experiments (see &#39;IoT Experiments&#39;
+secion. The experiments are organized in an increasing order on
+complexity, to facilitate learning. However feel free to go through
+these experiments out of order after you have mastered the
+prerequisites. </p>
+<p>The code references (when applicable) in this guide is organized into 3 parts:</p>
+<p><img
+src="images/aside.png"
+align="center" height="auto" width="100%" ></p>
+<ul>
+<li>MCU -- the code used to program the micro-controller unit (ESP 8266
+via the Arduino IDE)</li>
+<li>Server -- the cloud server that connects and controls the MCU.</li>
+<li>Client -- Simple HTML web-client to display results/analytics.</li>
+</ul>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>This guide assumes you have intermediate proficiency with the following
+technologies. If you need a refresher or a tutorial check out the
+references (basic overview provided in the next section).</p>
+<table>
+<thead>
+<tr>
+<th>Tool/Technology</th>
+<th>References</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front-end Web technologies (HTML/CSS/JS)</td>
+<td></td>
+</tr>
+<tr>
+<td>Backend server (Node.js used in this guide)</td>
+<td></td>
+</tr>
+<tr>
+<td>No-Sql Database (mongoDB used in guide)</td>
+<td></td>
+</tr>
+<tr>
+<td>Arduino IDE</td>
+<td></td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="basics">Basics</h1>
+<p>This section discusses some concepts that are needed to follow along wit
+this guide. Concepts covered here are cross-referenced throughout the guide.</p>
+<h2 id="the-client-server-model">The Client-Server Model</h2>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
+align="center" height="auto" width="100%" ></p>
+<p>The client-server model is the backbone of the World Wide Web (www) and
+is one of the most important protocols to comminucate withg
+Internet-enabled &#39;Things&#39;. The server is a program (not necessarily
+running on a &#39;big&#39; computer, but any Microprocessor/Microcontroller)
+that can receive requests at a specific port, and respond back to the
+client that sent the request. The most common example of this is HTTP
+servers that send file data (HTML, images, js, css etc.) like
+google.com, yahoo.com or any other web server. This guide will teach you
+how to write &#39;Web Services&#39; that can interact with your
+Internet-connected Things.</p>
+<p><br />
+<br /></p>
+<p>Read more: 
+<a href='https://en.wikipedia.org/wiki/Client%E2%80%93server_model'
+target='_blank'> Wikipedia Article </a>.</p>
+<h2 id="uniform-resource-locator-url-">Uniform Resource Locator (URL)</h2>
+<p><img
+src="images/url.png"
+align="center" height="auto" width="100%" ></p>
 <h2 id="arduino-ide">Arduino IDE</h2>
 <h2 id="esptool-py">esptool.py</h2>
 <h2 id="aws-ec2">AWS EC2</h2>
@@ -72,33 +174,23 @@ technologies. Figure 1 show the different technologies we will be using.</p>
 <h3 id="hello-world-server">Hello World - Server</h3>
 <p>  A simple HTTP server that send the string &quot;Hello World&quot; as response to
 every http GET request.</p>
-<aside class="notice">
- <i> Client server model </i>
-<br>
-<img
-src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
-align="center" height="248" width="auto" >
-
-The Client server model is the backbone of the World Wide Web (www) and
-is one of the most important protocols to comminucate withg
-Internet-enabled 'Things'. The server is a program (not necessarily
-running on a 'big' computer, but any Microprocessor/Microcontroller)
-that can receive requests at a specific port, and respond back to the
-client that sent the request. The most common example of this is HTTP
-servers that send file data (HTML, images, js, css etc.) like
-google.com, yahoo.com or any other web server. This guide will teach you
-how to write 'Web Services' that can interact with your
-Internet-connected Things.
-</aside>
-
-<p><br>
-Starting by installing Node.js (<a href="#node-js">install instructions</a>) on
+<p>Starting by installing Node.js (<a href="#node-js">install instructions</a>) on
 your machine. We will write a server that listens to
-localhost(127.0.0.1) at post 8080 (see aside on URLs).</p>
-<p><aside class="notice">
-Uniform Resource Locator (URL)
-</aside></p>
-<h3 id="hello-world-internet-connected-mcu">Hello World - Internet connected MCU</h3>
+localhost(127.0.0.1) at port 8080 (see aside on URLs for a discussion on
+ports).</p>
+<pre><code class="highlight javascript"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">"http"</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span> (<span class="hljs-params">req, res</span>) </span>{ <span class="hljs-comment">// req -&gt; request object; res -&gt; response object</span>
+   res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'text/plain'</span>}); <span class="hljs-comment">// send response header</span>
+   res.end(<span class="hljs-string">"hello world"</span>); <span class="hljs-comment">// send response body</span>
+}
+
+<span class="hljs-keyword">var</span> server = http.createServer(callback) <span class="hljs-comment">// create an http server</span>
+server.listen(<span class="hljs-number">8080</span>, <span class="hljs-string">"127.0.0.1"</span>); <span class="hljs-comment">// make server listen to port 8080</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Server running at: "</span>+ <span class="hljs-string">"http://127.0.0.1:8080"</span>);
+</code></pre>
+<p>Take a look at the code in the &#39;Node.js&#39; section (<a href="https://github.com/tejaswigowda/IoTStarterKit/tree/master/IoTExperiments/helloWorldServer">full code for example</a>). </p>
+<h3 id="hello-world-internet-connected-i-style-text-transform-lowercase-mu-i-c">Hello World - Internet connected <i style='text-transform:lowercase'>&mu;</i>C</h3>
 <h2 id="scan-for-wifi-networks">Scan for Wifi Networks</h2>
 <h2 id="turn-on-off-led-via-web-server">Turn on/off LED via Web-server</h2>
 <h2 id="turn-on-off-led-via-internet">Turn on/off LED via Internet</h2>
@@ -457,11 +549,9 @@ curl <span class="hljs-string">"api_endpoint_here"</span>
         </div>
       <div class="dark-box">
           <div class="lang-selector">
-              <a href="#" data-language-name="shell"> Terminal</a>
-              <a href="#" data-language-name="css"> CSS </a>
-              <a href="#" data-language-name="html"> HTML</a>
-              <a href="#" data-language-name="javascript"> Node.js</a>
-              <a href="#" data-language-name="json"> JSON</a>
+              <a href="#" data-language-name="c"> MCU</a>
+              <a href="#" data-language-name="javascript"> Server</a>
+              <a href="#" data-language-name="html"> Client</a>
           </div>
       </div>
     </div>
