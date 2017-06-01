@@ -1,12 +1,10 @@
 # IoT Starter Kit
 
-<aside class="notice">
-  This kit includes all the 
+  <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=foxy05f-20&marketplace=amazon&region=US&placement=B06XVLZYPY&asins=B06XVLZYPY&linkId=48e44b89acec2fdc95c9db44af01b1ae&show_border=false&link_opens_in_new_window=true"></iframe>
 
-</aside>
 
-The Kittn API uses the following error codes:
 
+<b> Part List </b>
 
 Part | Image | Description
 ---------- | -------

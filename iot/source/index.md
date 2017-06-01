@@ -131,10 +131,10 @@ references (basic overview provided in the next section).
 Tool/Technology | References
 ---- | ----
 Front-end Web technologies (HTML/CSS/JS) | [CSS Tutorial](https://www.w3schools.com/jquery/), [HTML5 Tag reference](http://www.w3schools.com/tags/), [jQuery API Reference](http://api.jquery.com/), [Bootstrap JS Reference](http://getbootstrap.com/javascript/), [JS Tutorial](http://www.w3schools.com/js/), [CSS Animations](http://www.w3schools.com/css/css3_animations.asp), [JSON](http://www.json.org/)
-Backend server (Node.js used in this guide) |[Node.js Get Started Documentation](http://nodeguide.com/beginner.html), [Node mongoskin](https://github.com/kissjs/node-mongoskin), [AWS Lightsail](https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/),  
-No-Sql Database (mongoDB used in guide) | 
-Arduino IDE |
-Hardware | 
+Backend server (Node.js used in this guide) |[Node.js Get Started Documentation](http://nodeguide.com/beginner.html), [Node.js Tutorial](https://www.w3schools.com/nodejs/), [Node mongoskin](https://github.com/kissjs/node-mongoskin), [AWS Lightsail](https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/), [Install mongodb on EC2, Amazon Linux]()
+No-Sql Database (mongoDB used in guide) | [Mongodb Tutorials](https://docs.mongodb.com/manual/tutorial/), [Mongo Shell Reference](https://docs.mongodb.com/manual/reference/mongo-shell/), [Install mongodb on EC2, Amazon Linux](https://gist.github.com/tejaswigowda/2ad42d76d03adf21c0c4)
+Arduino IDE | Install on [Mac](https://www.arduino.cc/en/guide/macOSX), [Linux](https://www.arduino.cc/en/guide/linux), [Windows](https://www.arduino.cc/en/guide/windows). [ESP8266 core for Arduino](https://github.com/esp8266/Arduino). 
+Hardware | [FoxDen IoT Starter Kit](https://www.amazon.com/FoxDen-ISK2017-Iot-Starter-Kit/dp/B06XVLZYPY/ref=sr_1_1?ie=UTF8&qid=1496254642&sr=8-1&keywords=foxden+iot), Desktop or Laptop with USB running Windows/Mac/Linux and a mordern browser. <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=foxy05f-20&marketplace=amazon&region=US&placement=B06XVLZYPY&asins=B06XVLZYPY&linkId=48e44b89acec2fdc95c9db44af01b1ae&show_border=false&link_opens_in_new_window=true"></iframe>
 
 
 # Tools
