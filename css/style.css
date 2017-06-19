@@ -891,6 +891,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-contact {
+  background-color: whitesmoke;
   padding-bottom: 0;
 }
 
@@ -901,9 +902,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-contact .fh5co-contact-info li {
   position: relative;
+  width: 250px;
   padding: 0;
-  margin: 0 0 1.5em 0;
-  padding-left: 50px;
+  margin: 20px auto;
+  /* padding-left: 50px; */
   list-style: none;
 }
 
@@ -1066,14 +1068,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 0;
   color: #7f7f7f;
   position: relative;
+  background-color: #3595ea;
+  /* IE9, iOS 3.2+ */
+  /*background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);*/
+  /*background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa));*/
+  /* Android 2.3 */
+  /*background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);*/
+  /* IE10+ */
+  /*background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);*/
+  /*background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); }*/
 }
 
 #footer .gotop {
   position: absolute;
-  top: -20px;
+  top: -40px;
   left: 50%;
   margin-left: -40px;
-  background: #fff;
+  background: #3595ea;
   z-index: 8;
   width: 80px;
   height: 80px;
@@ -1099,6 +1110,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   margin-bottom: 0px;
   padding-bottom: 0;
+}
+.icon-arrow-up2:before {
+    content: "\e096";
+    color: white;
+    font-size: 40px;
+    margin: auto;
+    vertical-align: -webkit-baseline-middle;
+    /* padding-top: 53px; */
 }
 
 .btn {
@@ -1129,7 +1148,12 @@ h1, h2, h3, h4, h5, h6 {
 .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
   border-color: transparent;
 }
-
+.fh5co-contact-info{
+  list-style: none;
+}
+.fh5co-contact-info li{
+  margin: 40px;
+}
 .social {
   padding: 0;
   margin: 0;
