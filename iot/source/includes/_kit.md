@@ -1,12 +1,10 @@
 # IoT Starter Kit
 
-<aside class="notice">
-  This kit includes all the 
+<a href="https://www.amazon.com/FoxDen-ISK2017-Iot-Starter-Kit/dp/B06XVLZYPY/ref=as_li_ss_il?ie=UTF8&qid=1496278432&sr=8-2&keywords=foxden&linkCode=li3&tag=foxy05f-20&linkId=fb5c82b46fb5db3e328a7a2846d98793" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06XVLZYPY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=foxy05f-20"></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=foxy05f-20&l=li3&o=1&a=B06XVLZYPY" width="1" height="1" border="0" alt="" style="border:none !important;margin:0px !important;" />
 
-</aside>
 
-The Kittn API uses the following error codes:
 
+<b> Part List </b>
 
 Part | Image | Description
 ---------- | -------

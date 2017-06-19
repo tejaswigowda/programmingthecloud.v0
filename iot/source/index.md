@@ -2,11 +2,9 @@
 title: Programming the Cloud : IoT
 
 language_tabs:
-  - shell: Terminal
-  - css: CSS 
-  - html: HTML
-  - javascript: Javascript
-  - json: JSON
+  - c: MCU
+  - javascript: Server
+  - html: Client
 
 toc_footers:
 
@@ -20,21 +18,132 @@ search: true
 
 
 
-# Introduction 
+# Introduction
 
-This guide will introduce you to front-end and back-end web
-technologies. Figure 1 show the different technologies we will be using.
+This guide will walk you through the code, technology, hardware and
+step-by-step instructions to:
+- Connect micro-controller unit (focus on ESP 8266) to the Internet. 
+- Control such microcontrollers securely over HTTP protocol (to act in
+the real-world).
+- Gather data from such micro-controllers into a server/database
+- Develop simple web clients to anayze the collected data.
 
-# Motivation
+Why would we need to learn any of this? To understand this we need to
+look at the past, present and future of the Internet. Since it's
+inception in the 1990's the commercial Internet has expanded at an
+exponential rate (measured by number of connected devices). Starting
+from server main-frames, moving on to desktop, laptop computers, we now
+have Internet on handheld devices. This trend will continue (powered by
+cheap internect connected MCUs, and secure IoT backbones available on
+demand. See Figure below for one such prediction.
+
+<img
+src="images/iotProjection.png"
+align="center" height="auto" width="100%" >
+
+This explosion in connected devices will bring in a new era of
+customized connected electronics, vast changes in business logic,
+supply-chain management, AI integration, home automation, media, smart
+cities etc. This guide is concerned with the engine that will largely
+shape the nacest IoT landscape. This guide focusses on programming ESP
+8266 MCU, sensing and actuating these sensors over the Internet (AWS
+services used in guide, but examples can work with any IaaS provider).
+There are even examples of voice activation with Echo!
+
+Suffice it to say IoT will be a marketable skill over the next few
+years. If you need more motivation read
+[this](https://www.computer.org/cms/Computer.org/ComputingNow/issues/2015/07/mit2015030002.pdf)
+[this](https://www.abiresearch.com/press/more-than-30-billion-devices-will-wirelessly-conne/),
+[this](http://internetofthingsagenda.techtarget.com/feature/Can-we-expect-the-Internet-of-Things-in-healthcare),
+[this](http://www.businessinsider.com/internet-of-everything-2015-bi-2014-12) and [references
+of this](https://en.wikipedia.org/wiki/Internet_of_things#Applications).
 
 
-# Tools/Technologies 
+This guide is organized around experiments (see 'IoT Experiments'
+secion. The experiments are organized in an increasing order on
+complexity, to facilitate learning. However feel free to go through
+these experiments out of order after you have mastered the
+prerequisites. 
+
+The code references (when applicable) in this guide is organized into 3 parts:
+ 
+<img
+src="images/aside.png"
+align="center" height="auto" width="100%" >
+
+- MCU -- the code used to program the micro-controller unit (ESP 8266
+via the Arduino IDE)
+- Server -- the cloud server that connects and controls the MCU.
+- Client -- Simple HTML web-client to display results/analytics.
+
+
+
+# Basics
+This section discusses some concepts that are needed to follow along wit
+this guide. Concepts covered here are cross-referenced throughout the guide.
+
+
+## The Client-Server Model
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Client-server-model.svg"
+align="center" height="auto" width="100%" >
+
+
+The client-server model is the backbone of the World Wide Web (www) and
+is one of the most important protocols to comminucate withg
+Internet-enabled 'Things'. The server is a program (not necessarily
+running on a 'big' computer, but any Microprocessor/Microcontroller)
+that can receive requests at a specific port, and respond back to the
+client that sent the request. The most common example of this is HTTP
+servers that send file data (HTML, images, js, css etc.) like
+Read more: 
+<a href='https://en.wikipedia.org/wiki/Client%E2%80%93server_model'
+target='_blank'> Wikipedia Article </a>.
+google.com, yahoo.com or any other web server. 
+
+This guide will teach you
+how to write 'Web Services' that can interact with your HTML
+web-clients. More importantly it will teach you to write
+micro-controller code that can interact with your web-services
+
+<img
+src="images/newI.png"
+align="center" height="auto" width="100%" >
+
+The rapid growth of internet connected devices (estimated to be 50B in
+2020) will come as a result of
+small everyday devices that can log data and do simple tasks. This guide
+focusses on such examples.
+
+
+## Uniform Resource Locator (URL)
+
+<img
+src="images/url.png"
+align="center" height="auto" width="100%" >
+
+## Prerequisites
+This guide assumes you have intermediate proficiency with the following
+technologies. If you need a refresher or a tutorial check out the
+references (basic overview provided in the next section).
+
+Tool/Technology | References
+---- | ----
+Front-end Web technologies (HTML/CSS/JS) | [CSS Tutorial](https://www.w3schools.com/jquery/), [HTML5 Tag reference](http://www.w3schools.com/tags/), [jQuery API Reference](http://api.jquery.com/), [Bootstrap JS Reference](http://getbootstrap.com/javascript/), [JS Tutorial](http://www.w3schools.com/js/), [CSS Animations](http://www.w3schools.com/css/css3_animations.asp), [JSON](http://www.json.org/)
+Backend server (Node.js used in this guide) |[Node.js Get Started Documentation](http://nodeguide.com/beginner.html), [Node.js Tutorial](https://www.w3schools.com/nodejs/), [Node mongoskin](https://github.com/kissjs/node-mongoskin), [AWS Lightsail](https://aws.amazon.com/blogs/aws/amazon-lightsail-the-power-of-aws-the-simplicity-of-a-vps/), [Install mongodb on EC2, Amazon Linux]()
+No-Sql Database (mongoDB used in guide) | [Mongodb Tutorials](https://docs.mongodb.com/manual/tutorial/), [Mongo Shell Reference](https://docs.mongodb.com/manual/reference/mongo-shell/), [Install mongodb on EC2, Amazon Linux](https://gist.github.com/tejaswigowda/2ad42d76d03adf21c0c4)
+Arduino IDE | Install on [Mac](https://www.arduino.cc/en/guide/macOSX), [Linux](https://www.arduino.cc/en/guide/linux), [Windows](https://www.arduino.cc/en/guide/windows). [ESP8266 core for Arduino](https://github.com/esp8266/Arduino). 
+Hardware | [FoxDen IoT Starter Kit](https://www.amazon.com/FoxDen-ISK2017-Iot-Starter-Kit/dp/B06XVLZYPY/ref=sr_1_1?ie=UTF8&qid=1496254642&sr=8-1&keywords=foxden+iot), Desktop or Laptop with USB running Windows/Mac/Linux and a mordern browser. <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=foxy05f-20&marketplace=amazon&region=US&placement=B06XVLZYPY&asins=B06XVLZYPY&linkId=48e44b89acec2fdc95c9db44af01b1ae&show_border=false&link_opens_in_new_window=true"></iframe>
+
+
+# Tools
 
 ## Arduino IDE
 
 ## esptool.py
 
-## AWS EC2
+## AWS Lightsail
 
 ## AWS Lambda
 
@@ -48,7 +157,37 @@ technologies. Figure 1 show the different technologies we will be using.
 
 ## Hello World
 ### Hello World - Server
-### Hello World - Internet connected MCU
+  A simple HTTP server that send the string "Hello World" as response to
+every http GET request.
+
+
+Starting by installing Node.js ([install instructions](#node-js)) on
+your machine. We will write a server that listens to
+localhost(127.0.0.1) at port 8080 (see aside on URLs for a discussion on
+ports).
+
+```javascript
+var http = require("http");
+
+function callback (req, res) { // req -> request object; res -> response object
+   res.writeHead(200, {'Content-Type': 'text/plain'}); // send response header
+   res.end("hello world"); // send response body
+}
+
+var server = http.createServer(callback) // create an http server
+server.listen(8080, "127.0.0.1"); // make server listen to port 8080
+console.log("Server running at: "+ "http://127.0.0.1:8080");
+```
+
+Take a look at the code in the 'Node.js' section ([full code for example](https://github.com/tejaswigowda/IoTStarterKit/tree/master/IoTExperiments/helloWorldServer)). 
+
+
+
+
+
+
+### Hello World - Internet connected <i style='text-transform:lowercase'>&mu;</i>C
+
 
 ## Scan for Wifi Networks
 
@@ -56,6 +195,52 @@ technologies. Figure 1 show the different technologies we will be using.
 
 ## Turn on/off LED via Internet
 
+## Internet connected Push Button
+
+## Push button to send email
+
+## Push Button to send temperature/humidity as email
+
+## Graphing temperature and humidity
+
+## Logging sensor values in a database
+
+## Sending alerts when certain values are out of range
+
+## Dimming LEDs with Pulse Width Modulation (PWM)
+
+## Control RGB lights
+
+## Play MIDI over the Internet
+
+## Turn on/off any AC device using relay
+
+## Control 2 color LED
+
+## Control 1-bit display
+
+## Use 7 color flash to alert high temperature (IR LED)
+
+## Use Tap module to send morse-code to server
+
+## Automatic light switch (with data logging)
+
+## Motion switch (with data logging)
+
+## Shock sensors for logging shocks
+
+## Internet enabled touch switch (with hot keys)
+
+## A blind navigation tool (with data logging)
+
+## Control fan speed with a magnet (with data logging)
+
+## Connected home --  control LEDs with Echo
+
+## More to come
+  The componets in the IoT starter kit can be used for many more
+experiments. If you want your experiment to be featured here, please
+submit your experiment [here]().
 
 ```shell
 require 'kittn'
